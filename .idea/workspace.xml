@@ -4,34 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/CharacterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/WandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/HouseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/PetModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/PotionModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/WandModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Niveau/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/CharacterView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/Display.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/HouseView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/PetView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/PotionView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/WandView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/WizardView.java" afterDir="false" />
+    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="MVC">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CharacterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/CharacterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/CharacterView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +86,18 @@
       <option name="presentableId" value="Default" />
       <updated>1679670736332</updated>
     </task>
+    <task id="LOCAL-00001" summary="MVC">
+      <created>1679851512038</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679851512038</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVC" />
   </component>
 </project>

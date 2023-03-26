@@ -1,24 +1,12 @@
 package View;
 
 public class CharacterView {
-    public void displayCharacter(String name, int health, int maxHealth, int level, int damage) {
+    public void displayCharacterDetails(String name, int health, String wand, String pet, int mana, int experience) {
         System.out.println("Name: " + name);
-        System.out.println("Health: " + health + "/" + maxHealth);
-    }
-
-    public void displayDamageDealt(String attackerName, String targetName, int damageDealt) {
-        System.out.println(attackerName + " attacks " + targetName + " and deals " + damageDealt + " damage.");
-    }
-
-    public void displayDamageTaken(String characterName, int actualDamage) {
-        System.out.println(characterName + " takes " + actualDamage + " damage.");
-    }
-
-    public void displayDefend(String characterName) {
-        System.out.println(characterName + " prepares to defend.");
-    }
-
-    public void displayHeal(String characterName, int healAmount) {
-        System.out.println(characterName + " uses a health potion and recovers " + healAmount + " health.");
+        System.out.println("Health: " + health);
+        System.out.println("Wand: " + wand);
+        System.out.println("Pet: " + pet);
+        System.out.println("Mana: " + mana);
+        System.out.println("Experience: " + experience);
     }
 }

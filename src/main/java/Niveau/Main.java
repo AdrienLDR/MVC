@@ -16,7 +16,7 @@ import View.WizardView;
 public class Main {
     public static void main(String[] args) {
         // create wizard
-        WizardModel wizardModel = new WizardModel(null, 100,null, null,50,0);
+        WizardModel wizardModel = new WizardModel(null, 100,1, null,null,0, 0);
         WizardView wizardView = new WizardView();
         PetModel petModel = new PetModel();
         WizardController wizardController = new WizardController(wizardModel, wizardView, null, petModel);

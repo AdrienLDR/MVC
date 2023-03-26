@@ -1,7 +1,7 @@
 package Model;
 
 public abstract class CharacterModel {
-    private String name;
+    private static String name;
     private int health;
     private int level;
 
@@ -11,7 +11,7 @@ public abstract class CharacterModel {
         this.level = level;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
