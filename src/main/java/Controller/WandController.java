@@ -4,8 +4,8 @@ import Model.WandModel;
 import View.WandView;
 
 public class WandController {
-    private WandModel wandModel;
-    private WandView wandView;
+    private final WandModel wandModel;
+    private final WandView wandView;
 
     public WandController(WandModel wandModel, WandView wandView) {
         this.wandModel = wandModel;
@@ -17,7 +17,7 @@ public class WandController {
         String core = WandView.chooseCore();
         int length = WandModel.generateLength();
         wandModel.setWand(wood, core, length);
-        wandView.displayWandInfo(wizardName, wandModel.getWand());
+        WandView.displayWandInfo(wizardName, wandModel.getWand());
     }
 
 }

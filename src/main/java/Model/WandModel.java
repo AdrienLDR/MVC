@@ -10,9 +10,9 @@ public class WandModel {
     public WandModel() {}
 
     public void setWand(String wood, String core, int length) {
-        this.wood = wood;
-        this.core = core;
-        this.length = length;
+        WandModel.wood = wood;
+        WandModel.core = core;
+        WandModel.length = length;
     }
 
     public WandModel getWand() {

@@ -6,7 +6,7 @@ public abstract class CharacterModel {
     private int level;
 
     public CharacterModel(String name, int health, int level) {
-        this.name = name;
+        CharacterModel.name = name;
         this.health = health;
         this.level = level;
     }
@@ -24,7 +24,7 @@ public abstract class CharacterModel {
     }
 
     public void setName(String name) {
-        this.name = name;
+        CharacterModel.name = name;
     }
 
     public void setHealth(int health) {
@@ -34,8 +34,7 @@ public abstract class CharacterModel {
     public void setLevel(int level) {
         this.level = level;
     }
-
-    public abstract void attack(Character enemy);
+    public abstract void attack(String spellName);
 
     public abstract void heal();
 

@@ -5,7 +5,7 @@ import Model.WandModel;
 import java.util.Scanner;
 
 public class WandView {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static String chooseWood() {
         System.out.println("Comment te decris-tu ?: \n1) Créatif \n2) Curieux \n3) Discret \n4) Dynamique ");
@@ -43,7 +43,7 @@ public class WandView {
     }
 
     public static void displayWandInfo(String name, WandModel wand) {
-        System.out.println("Félicitations " + name + ", tu as choisi une baguette en " + wand.getWood() + ", mesure " + wand.getLength() + "cm et a un cœur " + wand.getCore() + ".");
+        System.out.println("Félicitations " + name + ", tu as choisi une baguette en " + WandModel.getWood() + ", mesure " + WandModel.getLength() + "cm et a un cœur " + WandModel.getCore() + ".");
     }
 
 }

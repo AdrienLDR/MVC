@@ -6,8 +6,8 @@ import View.PotionView;
 import java.util.List;
 
 public class PotionController {
-    private List<PotionModel> potions;
-    private PotionView view;
+    private final List<PotionModel> potions;
+    private final PotionView view;
 
     public PotionController() {
         potions = new ArrayList<>();

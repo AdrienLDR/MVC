@@ -16,7 +16,7 @@ import View.WizardView;
 public class Main {
     public static void main(String[] args) {
         // create wizard
-        WizardModel wizardModel = new WizardModel(null, 100,1, null,null,0, 0);
+        WizardModel wizardModel = new WizardModel(null, 100,1, null,null,0, 0,null);
         WizardView wizardView = new WizardView();
         PetModel petModel = new PetModel();
         WizardController wizardController = new WizardController(wizardModel, wizardView, null, petModel);
@@ -31,20 +31,20 @@ public class Main {
         HouseController houseController = new HouseController(houseModel, houseView);
 
         // choose wizard house
-        String chosenHouse = houseController.chooseHouse(wizardName);
-        houseModel.setHouse(chosenHouse);
+        String chosenHouse = HouseController.chooseHouse(wizardName);
+        HouseModel.setHouse(chosenHouse);
 
         // create wand
         WandModel wandModel = new WandModel();
         WandView wandView = new WandView();
         WandController wandController = new WandController(wandModel, wandView);
         wandController.createWand(wizardName);
-        wizardModel.setWand(wandModel.getWood() + " " + wandModel.getLength());
+        wizardModel.setWand(WandModel.getWood() + " " + WandModel.getLength());
 
         // choose pet
         PetView petView = new PetView();
         PetController petController = new PetController(petModel, petView);
-        petController.choosePet(wizardModel);
+        PetController.choosePet(wizardModel);
 
         // display wizard info
         wizardController.updateView();

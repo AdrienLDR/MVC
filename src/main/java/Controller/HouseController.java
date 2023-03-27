@@ -4,8 +4,8 @@ import Model.HouseModel;
 import View.HouseView;
 
 public class HouseController {
-    private HouseModel model;
-    private HouseView view;
+    private final HouseModel model;
+    private final HouseView view;
 
     public HouseController(HouseModel model, HouseView view) {
         this.model = model;

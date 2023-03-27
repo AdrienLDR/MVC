@@ -6,14 +6,14 @@ public class PetView {
     public static void displayWelcome() {
         System.out.println("Bienvenue dans le monde des animaux de compagnie dans Harry Potter!");
     }
-    public static void displayQualityOptions() {
+    public static void displayQualitOptions() {
         System.out.println("Quelle est votre qualité principale?");
         System.out.println("1. Intelligence");
         System.out.println("2. Fidélité");
         System.out.println("3. Courage");
     }
 
-    public static void displayAnimalOptions() {
+    public static void displayQualityOptions() {
         System.out.println("Quel est votre animal de compagnie préféré?");
         System.out.println("1. Hibou");
         System.out.println("2. Chien");

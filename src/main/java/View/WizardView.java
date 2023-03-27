@@ -6,7 +6,7 @@ import Model.WandModel;
 import java.util.Scanner;
 
 public class WizardView {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static String askForName() {
         System.out.print("Enter your name: ");

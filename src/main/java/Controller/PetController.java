@@ -5,8 +5,8 @@ import Model.WizardModel;
 import View.PetView;
 
 public class PetController {
-    private PetModel model;
-    private PetView view;
+    private final PetModel model;
+    private final PetView view;
 
     public PetController(PetModel model, PetView view) {
         this.model = model;
@@ -14,8 +14,8 @@ public class PetController {
     }
 
     public void updateView() {
-        String name = model.getName();
-        String species = model.getSpecies();
+        String name = PetModel.getName();
+        String species = PetModel.getSpecies();
         PetView.display(name, species);
     }
 

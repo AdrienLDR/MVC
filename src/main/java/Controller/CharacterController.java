@@ -1,11 +1,12 @@
 package Controller;
 
+import Model.CharacterModel;
 import Model.WizardModel;
-import view.CharacterView;
+import View.CharacterView;
 
 public class CharacterController {
-    private WizardModel wizard;
-    private CharacterView view;
+    private final WizardModel wizard;
+    private final CharacterView view;
 
     public CharacterController(WizardModel wizard, CharacterView view) {
         this.wizard = wizard;
@@ -13,7 +14,7 @@ public class CharacterController {
     }
 
     public void updateView() {
-        view.displayCharacterDetails(wizard.getName(), wizard.getHealth(), wizard.getWand(), wizard.getPet(), wizard.getMana(), wizard.getExperience());
+        view.displayCharacterDetails(CharacterModel.getName(), wizard.getHealth(), wizard.getWand(), wizard.getPet(), wizard.getMana(), wizard.getExperience());
     }
 
     public void setName(String name) {

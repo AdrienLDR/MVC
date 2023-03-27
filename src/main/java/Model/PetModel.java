@@ -5,8 +5,8 @@ public class PetModel {
     private static String species;
 
     public PetModel() {
-        this.name = name;
-        this.species = species;
+        name = name;
+        species = species;
     }
 
 
@@ -15,7 +15,7 @@ public class PetModel {
     }
 
     public void setName(String name) {
-        this.name = name;
+        PetModel.name = name;
     }
 
     public static String getSpecies() {
@@ -23,7 +23,7 @@ public class PetModel {
     }
 
     public void setSpecies(String species) {
-        this.species = species;
+        PetModel.species = species;
     }
 
 
@@ -31,7 +31,7 @@ public class PetModel {
         return this;
     }
     public void setPet(PetModel pet) {
-        this.name = name;
-        this.species = species;
+        name = name;
+        species = species;
     }
 }

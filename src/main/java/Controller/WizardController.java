@@ -1,17 +1,14 @@
 package Controller;
 
-import Model.HouseModel;
-import Model.PetModel;
-import Model.WandModel;
-import Model.WizardModel;
+import Model.*;
 import View.PetView;
 import View.WizardView;
 
 public class WizardController {
-    private WizardModel wizardModel;
-    private WizardView wizardView;
-    private HouseModel houseModel;
-    private PetModel petModel;
+    private final WizardModel wizardModel;
+    private final WizardView wizardView;
+    private final HouseModel houseModel;
+    private final PetModel petModel;
     private PetView petView;
 
     public WizardController(WizardModel wizardModel, WizardView wizardView, HouseModel houseModel, PetModel petModel) {
@@ -22,7 +19,7 @@ public class WizardController {
     }
 
     public void updateView() {
-        String name = WizardModel.getName();
+        String name = CharacterModel.getName();
         int health = wizardModel.getHealth();
         String houseName = HouseModel.getHouse();
         String petName = PetModel.getName();
@@ -50,8 +47,8 @@ public class WizardController {
     }
 
     public void chooseHouse() {
-        String chosenHouse = HouseController.chooseHouse(wizardModel.getName());
-        houseModel.setHouse(chosenHouse);
+        String chosenHouse = HouseController.chooseHouse(CharacterModel.getName());
+        HouseModel.setHouse(chosenHouse);
     }
 
     public void choosePet(String name, String species) {
