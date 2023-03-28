@@ -1,21 +1,22 @@
 package Controller;
 
 import Model.*;
-import View.PetView;
 import View.WizardView;
+import View.SpellView;
 
 public class WizardController {
     private final WizardModel wizardModel;
     private final WizardView wizardView;
     private final HouseModel houseModel;
     private final PetModel petModel;
-    private PetView petView;
+    private final SpellController spellController;
 
-    public WizardController(WizardModel wizardModel, WizardView wizardView, HouseModel houseModel, PetModel petModel) {
+    public WizardController(WizardModel wizardModel, WizardView wizardView, HouseModel houseModel, PetModel petModel, SpellController spellController) {
         this.wizardModel = wizardModel;
         this.wizardView = wizardView;
         this.houseModel = houseModel;
         this.petModel = petModel;
+        this.spellController = spellController;
     }
 
     public void updateView() {
@@ -25,14 +26,14 @@ public class WizardController {
         String petName = PetModel.getName();
         String petSpecies = PetModel.getSpecies();
         String wandWood = WandModel.getWood();
-        String wandCore =WandModel.getCore();
+        String wandCore = WandModel.getCore();
         int wandLength = WandModel.getLength();
 
-        int mana = wizardModel.getMana();
+        int mana = WizardModel.getMana();
         int experience = wizardModel.getExperience();
         WizardView.display(name, health, mana, experience, houseName, petName, petSpecies, wandWood, wandCore, wandLength);
+        SpellView.displayKnownSpells(wizardModel.getKnownSpells());
     }
-
 
     public void setWizardHealth(int health) {
         wizardModel.setHealth(health);
@@ -47,8 +48,8 @@ public class WizardController {
     }
 
     public void chooseHouse() {
-        String chosenHouse = HouseController.chooseHouse(CharacterModel.getName());
-        HouseModel.setHouse(chosenHouse);
+        String chosenHouse = HouseController.chooseHouse(wizardModel.getName());
+        houseModel.setHouse(chosenHouse);
     }
 
     public void choosePet(String name, String species) {
@@ -61,5 +62,14 @@ public class WizardController {
         int newExp = currentExp + amount;
         wizardModel.setExperience(newExp);
         updateView();
+    }
+
+    public void learnSpell(String spell) {
+        wizardModel.learnSpell(spell);
+        updateView();
+    }
+
+    public void castSpell(String spellName) {
+        wizardModel.attack(spellName);
     }
 }

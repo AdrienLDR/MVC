@@ -1,26 +1,24 @@
 package Niveau;
 
-import Controller.HouseController;
-import Controller.PetController;
-import Controller.WandController;
-import Controller.WizardController;
-import Model.HouseModel;
-import Model.PetModel;
-import Model.WandModel;
-import Model.WizardModel;
-import View.HouseView;
-import View.PetView;
-import View.WandView;
-import View.WizardView;
+import Controller.*;
+import Model.*;
+import View.*;
+
+import static Controller.SpellController.knownSpells;
+import static Controller.SpellController.wizard;
+
 
 public class Main {
     public static void main(String[] args) {
+
         // create wizard
-        WizardModel wizardModel = new WizardModel(null, 100,1, null,null,0, 0,null);
+        WizardModel wizardModel = new WizardModel(null, 100,1, null,null,0, 0);
         WizardView wizardView = new WizardView();
         PetModel petModel = new PetModel();
-        WizardController wizardController = new WizardController(wizardModel, wizardView, null, petModel);
+        SpellController spellController = new SpellController(wizard, knownSpells, new SpellView());
+        WizardController wizardController = new WizardController(wizardModel, wizardView, null, petModel, spellController);
 
+        SpellController.askSpellAndCast();
         // choose wizard name
         String wizardName = WizardView.askForName();
         wizardController.chooseName(wizardName);

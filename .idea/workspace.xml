@@ -8,23 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="MVC">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/SpellView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/PetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/PetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/WandModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WandModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/PetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/PetView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/WandView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/WandView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/SpellView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/SpellView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/WizardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/WizardView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,27 +43,30 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2NSwLT53i9wE2LnaSwYPfGyMN1l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -116,11 +110,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679856767472</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="MVC">
+      <created>1679877785499</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679877785499</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MVC" />
     <option name="LAST_COMMIT_MESSAGE" value="MVC" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

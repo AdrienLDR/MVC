@@ -11,19 +11,18 @@ public class WizardModel extends CharacterModel {
     private String pet;
     private static int mana;
     private int experience;
-    private final List<String> knownSpells;
-    private final List<String> availableSpells;
-    private final SpellView spellView;
+    private List<SpellModel> knownSpells;
+    private List<SpellModel> availableSpells;
+    private SpellView spellView;
 
-    public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience, SpellView spellView) {
+    public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience) {
         super(name, health, level);
         this.wand = wand;
         this.pet = pet;
-        this.mana = mana;
+        WizardModel.mana = mana;
         this.experience = experience;
-        this.knownSpells = new ArrayList<>();
-        this.availableSpells = new ArrayList<>();
-        this.spellView = spellView;
+        this.knownSpells = new ArrayList<SpellModel>();
+        this.availableSpells = new ArrayList<SpellModel>();
     }
 
     public String getWand() {
@@ -47,7 +46,7 @@ public class WizardModel extends CharacterModel {
     }
 
     public void setMana(int mana) {
-        this.mana = mana;
+        WizardModel.mana = mana;
     }
 
     public int getExperience() {
@@ -58,33 +57,33 @@ public class WizardModel extends CharacterModel {
         this.experience = experience;
     }
 
-    public List<String> getKnownSpells() {
+    public List<SpellModel> getKnownSpells() {
         return knownSpells;
     }
 
-    public void addKnownSpell(String spell) {
-        knownSpells.add(spell);
-    }
-
-    public List<String> getAvailableSpells() {
-        return availableSpells;
-    }
-
-    public void addAvailableSpell(String spell) {
-        availableSpells.add(spell);
-    }
-
     public void learnSpell(String spell) {
-        if (availableSpells.contains(spell)) {
-            knownSpells.add(spell);
-            availableSpells.remove(spell);
+        for (SpellModel availableSpell : availableSpells) {
+            if (availableSpell.getName().equals(spell)) {
+                knownSpells.add(availableSpell);
+                availableSpells.remove(availableSpell);
+                break;
+            }
         }
     }
 
     public void updateAvailableSpells(List<String> allSpells) {
-        for (String spell : allSpells) {
-            if (!knownSpells.contains(spell) && !availableSpells.contains(spell)) {
-                availableSpells.add(spell);
+        for (String spellName : allSpells) {
+            boolean spellAlreadyKnown = false;
+            for (SpellModel knownSpell : knownSpells) {
+                if (knownSpell.getName().equals(spellName)) {
+                    spellAlreadyKnown = true;
+                    break;
+                }
+            }
+            if (!spellAlreadyKnown) {
+                SpellModel newSpell = new SpellModel(spellName, "Unknown effect", 0, 0);
+                availableSpells.add(newSpell);
+
             }
         }
     }
@@ -92,18 +91,15 @@ public class WizardModel extends CharacterModel {
     @Override
     public void attack(String spellName) {
         SpellController.askSpellAndCast();
-
     }
 
     @Override
     public void heal() {
-        // implementation of healing for a wizard
-        // for example: setHealth(getHealth() + 10);
+        setHealth(getHealth() + 10);
     }
 
     @Override
     public void levelUp() {
-        // implementation of level up for a wizard
-        // for example: setLevel(getLevel() + 1);
+        setLevel(getLevel() + 1);
     }
 }

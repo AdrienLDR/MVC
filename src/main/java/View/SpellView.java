@@ -1,28 +1,43 @@
 package View;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import Model.SpellModel;
 
 public class SpellView {
 
-    private final Scanner scanner;
-    private SpellModel[] spells;
+    private Scanner scanner;
 
     public SpellView() {
         scanner = new Scanner(System.in);
     }
 
-    public void displaySpells() {
+    public static void displaySpells() {
         System.out.println("List of spells:");
-        for (SpellModel spell : spells) {
+        for (SpellModel spell : SpellModel.getAvailableSpells()) {
             System.out.println(spell.getName() + " - " + spell.getEffect() + " (Damage: " + spell.getDamage() + ", Mana cost: " + spell.getManaCost() + ")");
         }
     }
 
-    public String askSpell() {
-        System.out.print("Enter the name of the spell to cast: ");
-        return scanner.nextLine();
+    public static void displayKnownSpells(List<SpellModel> knownSpells) {
+        System.out.println("Known spells:");
+
+        for (SpellModel spell : knownSpells) {
+            System.out.println(spell.getName() + " - " + spell.getEffect() + " (Damage: " + spell.getDamage() + ", Mana cost: " + spell.getManaCost() + ")");
+        }
+    }
+    public String askSpell(List<SpellModel> knownSpells) {
+        System.out.println("Please enter the name of the spell you want to cast: ");
+        String spellName = scanner.nextLine();
+
+        for (SpellModel knownSpell : knownSpells) {
+            if (knownSpell.getName().equalsIgnoreCase(spellName)) {
+                return spellName;
+            }
+        }
+        return spellName;
     }
 
     public void displayInvalidSpell() {
@@ -36,5 +51,4 @@ public class SpellView {
     public void displayCastSpell(String spellName, int damage) {
         System.out.println("You cast " + spellName + " for " + damage + " damage!");
     }
-
 }

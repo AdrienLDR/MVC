@@ -69,6 +69,7 @@ public class SpellModel {
     public static List<SpellModel> getKnownSpells() {
         List<SpellModel> knownSpells = new ArrayList<>();
         // Ajouter les sorts connus
+        knownSpells.add(new SpellModel("Lumos", "Sortilège d'éclairage", 5, 2));
         knownSpells.add(new SpellModel("Expelliarmus", "Sortilège de désarmement", 20, 10));
         knownSpells.add(new SpellModel("Expecto Patronum", "Sortilège du Patronus", 50, 40));
         // ...

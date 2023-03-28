@@ -1,9 +1,13 @@
 package View;
 
 import Model.PetModel;
+import Model.SpellModel;
 import Model.WandModel;
 
+import java.util.List;
 import java.util.Scanner;
+
+import static Model.SpellModel.getKnownSpells;
 
 public class WizardView {
     private static final Scanner scanner = new Scanner(System.in);
@@ -19,6 +23,8 @@ public class WizardView {
         Display.displayHouseInfo(houseName);
         Display.displayPetInfo(petName, petSpecies);
         Display.displayWandInfo(wandWood, wandCore, wandLength);
+        SpellView.displayKnownSpells(getKnownSpells());
+
     }
 
 }
