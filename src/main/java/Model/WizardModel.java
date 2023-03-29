@@ -10,13 +10,16 @@ public class WizardModel extends CharacterModel {
     private String wand;
     private String pet;
     private static int mana;
+
+    private int level;
     private int experience;
     private List<SpellModel> knownSpells;
     private List<SpellModel> availableSpells;
     private SpellView spellView;
 
     public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience) {
-        super(name, health, level);
+        super(name, health);
+        this.level = level;
         this.wand = wand;
         this.pet = pet;
         WizardModel.mana = mana;
@@ -48,7 +51,12 @@ public class WizardModel extends CharacterModel {
     public void setMana(int mana) {
         WizardModel.mana = mana;
     }
-
+    public int getLevel() {
+        return level;
+    }
+    public void setLevel(int level) {
+        this.level = level;
+    }
     public int getExperience() {
         return experience;
     }
@@ -90,16 +98,19 @@ public class WizardModel extends CharacterModel {
 
     @Override
     public void attack(String spellName) {
-        SpellController.askSpellAndCast();
+        SpellController spellController = new SpellController(this, knownSpells, new SpellView());
+        spellController.askSpellAndCast();
     }
 
     @Override
     public void heal() {
         setHealth(getHealth() + 10);
     }
-
-    @Override
     public void levelUp() {
         setLevel(getLevel() + 1);
+    }
+
+    public int getVisibility() {
+        return 2;
     }
 }

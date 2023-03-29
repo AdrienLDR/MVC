@@ -4,21 +4,20 @@ import Controller.*;
 import Model.*;
 import View.*;
 
-import static Controller.SpellController.knownSpells;
-import static Controller.SpellController.wizard;
+import java.util.List;
 
 
-public class Main {
+public class level0 {
     public static void main(String[] args) {
 
         // create wizard
-        WizardModel wizardModel = new WizardModel(null, 100,1, null,null,0, 0);
+        WizardModel wizardModel = new WizardModel(null, 100,1, null,null,50, 0);
         WizardView wizardView = new WizardView();
         PetModel petModel = new PetModel();
-        SpellController spellController = new SpellController(wizard, knownSpells, new SpellView());
+        List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
+        SpellController spellController = new SpellController(wizardModel,knownSpells, new SpellView());
         WizardController wizardController = new WizardController(wizardModel, wizardView, null, petModel, spellController);
 
-        SpellController.askSpellAndCast();
         // choose wizard name
         String wizardName = WizardView.askForName();
         wizardController.chooseName(wizardName);
@@ -46,5 +45,7 @@ public class Main {
 
         // display wizard info
         wizardController.updateView();
+        new level1();
+        level1.level1();
     }
 }

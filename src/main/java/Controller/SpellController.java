@@ -7,47 +7,47 @@ import Model.WizardModel;
 import View.SpellView;
 
 public class SpellController {
-    private static WizardModel wizard;
-    private static List<SpellModel> knownSpells;
-    private static SpellView view;
+    private WizardModel wizard;
+    private List<SpellModel> knownSpells;
+    private SpellView view;
 
     public SpellController(WizardModel wizard, List<SpellModel> knownSpells, SpellView view) {
-        SpellController.wizard = wizard;
-        SpellController.knownSpells = knownSpells;
-        SpellController.view = view;
+        this.wizard = wizard;
+        this.knownSpells = knownSpells;
+        this.view = view;
     }
 
     public void displaySpells() {
         SpellView.displaySpells();
     }
 
-    public static void castSpell(String spellName) {
+    public void castSpell(String spellName) {
         SpellModel spell = getSpell(spellName);
         if (spell == null) {
             view.displayInvalidSpell();
             return;
         }
-        int damage = spell.getDamage();
-        int manaCost = spell.getManaCost();
-        if (manaCost > wizard.getMana()) {
+
+        if (spell.getManaCost() > wizard.getMana()) {
             view.displayInsufficientMana();
             return;
         }
-        wizard.setMana(wizard.getMana() - manaCost);
-        wizard.attack(spellName);
+        int damage = spell.getDamage();
+        wizard.setMana(wizard.getMana() - spell.getManaCost());
         view.displayCastSpell(spell.getName(), damage);
     }
 
-    public static void askSpellAndCast() {
+    public void askSpellAndCast() {
         SpellView.displayKnownSpells(knownSpells);
         String spellName = view.askSpell(knownSpells);
+        if (spellName == null) {
+            view.displayInvalidSpell();
+            return;
+        }
         castSpell(spellName);
     }
 
-    private static SpellModel getSpell(String spellName) {
-        if (knownSpells == null) {
-            return null;
-        }
+    private SpellModel getSpell(String spellName) {
         for (SpellModel spell : knownSpells) {
             if (spell.getName().equalsIgnoreCase(spellName)) {
                 return spell;

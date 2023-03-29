@@ -32,7 +32,7 @@ public class WizardController {
         int mana = WizardModel.getMana();
         int experience = wizardModel.getExperience();
         WizardView.display(name, health, mana, experience, houseName, petName, petSpecies, wandWood, wandCore, wandLength);
-        SpellView.displayKnownSpells(wizardModel.getKnownSpells());
+        wizardModel.getKnownSpells();
     }
 
     public void setWizardHealth(int health) {

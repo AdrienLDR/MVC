@@ -2,6 +2,7 @@ package Controller;
 
 import java.util.ArrayList;
 import Model.PotionModel;
+import Model.WizardModel;
 import View.PotionView;
 import java.util.List;
 
@@ -35,5 +36,8 @@ public class PotionController {
             return;
         }
         view.displayPotion(potions.get(potionIndex));
+    }
+
+    public void useHidePotion(WizardModel wizard) {
     }
 }

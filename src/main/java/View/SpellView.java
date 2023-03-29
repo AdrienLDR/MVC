@@ -24,20 +24,21 @@ public class SpellView {
     public static void displayKnownSpells(List<SpellModel> knownSpells) {
         System.out.println("Known spells:");
 
-        for (SpellModel spell : knownSpells) {
+        for (SpellModel spell : SpellModel.getKnownSpells()) {
             System.out.println(spell.getName() + " - " + spell.getEffect() + " (Damage: " + spell.getDamage() + ", Mana cost: " + spell.getManaCost() + ")");
         }
     }
+
     public String askSpell(List<SpellModel> knownSpells) {
         System.out.println("Please enter the name of the spell you want to cast: ");
         String spellName = scanner.nextLine();
 
         for (SpellModel knownSpell : knownSpells) {
             if (knownSpell.getName().equalsIgnoreCase(spellName)) {
-                return spellName;
+                return knownSpell.getName(); // retourne le nom du sort connu
             }
         }
-        return spellName;
+        return null; // retourne null si le sort n'a pas été trouvé
     }
 
     public void displayInvalidSpell() {
@@ -51,4 +52,5 @@ public class SpellView {
     public void displayCastSpell(String spellName, int damage) {
         System.out.println("You cast " + spellName + " for " + damage + " damage!");
     }
+
 }
