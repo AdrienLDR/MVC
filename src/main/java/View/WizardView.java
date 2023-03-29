@@ -1,10 +1,5 @@
 package View;
 
-import Model.PetModel;
-import Model.SpellModel;
-import Model.WandModel;
-
-import java.util.List;
 import java.util.Scanner;
 
 import static Model.SpellModel.getKnownSpells;

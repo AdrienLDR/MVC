@@ -8,28 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="cats sort presque fonctrionnel">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/AttackModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/BellatrixLestrangeModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DoloresOmbrageModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DétraqueurModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/MangemortModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/PeterPettigrewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/TrollModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/VoldemortModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/EnemyModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/ItemView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/TrollModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/TrollModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/EnemyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/EnemyModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/level1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/level0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/SpellView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/SpellView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/level0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/HouseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/HouseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/WizardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/WizardView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +78,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Level0" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Niveau.Level0" />
+      <module name="MVCHarryPotter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Niveau.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="MVC HarryPotter" />
       <method v="2">
@@ -99,6 +104,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Level0" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -154,5 +164,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MVC_HarryPotter$Level0.ic" NAME="Level0 Coverage Results" MODIFIED="1680102578660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Niveau.*</FILTER>
+    </SUITE>
   </component>
 </project>

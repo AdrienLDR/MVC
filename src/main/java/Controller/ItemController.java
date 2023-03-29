@@ -8,7 +8,7 @@ import View.ItemView;
 import java.util.Scanner;
 
 public class ItemController {
-    public void useLavatoryItem(WizardModel wizard, TrollModel troll, int lavabo, int visibiliteEnnemi) {
+    public void useLavatoryItem(WizardModel wizard, TrollModel troll, int lavabo, int trollVisibility) {
         ItemView view = new ItemView();
         Scanner scanner = new Scanner(System.in);
         view.displayLavatoryItem();
@@ -16,6 +16,7 @@ public class ItemController {
         if (action == 1) {
             view.displayCleaningResult();
             troll.setHealth(troll.getHealth() - 2);
+            view.displayTrollHealth();
         } else if (action == 2) {
             view.displaySlipperyResult();
             troll.setHealth(troll.getHealth() - 4);

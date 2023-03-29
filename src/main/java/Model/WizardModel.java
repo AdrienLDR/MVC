@@ -2,71 +2,34 @@ package Model;
 
 import Controller.SpellController;
 import View.SpellView;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Setter
+@Getter
 public class WizardModel extends CharacterModel {
+    
     private String wand;
     private String pet;
-    private static int mana;
-
+    private int mana;
     private int level;
     private int experience;
     private List<SpellModel> knownSpells;
     private List<SpellModel> availableSpells;
     private SpellView spellView;
+    private int visibilityUser;
+
 
     public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience) {
         super(name, health);
         this.level = level;
         this.wand = wand;
         this.pet = pet;
-        WizardModel.mana = mana;
+        this.mana = mana;
         this.experience = experience;
         this.knownSpells = new ArrayList<SpellModel>();
         this.availableSpells = new ArrayList<SpellModel>();
-    }
-
-    public String getWand() {
-        return wand;
-    }
-
-    public void setWand(String wand) {
-        this.wand = wand;
-    }
-
-    public String getPet() {
-        return pet;
-    }
-
-    public void setPet(String pet) {
-        this.pet = pet;
-    }
-
-    public static int getMana() {
-        return mana;
-    }
-
-    public void setMana(int mana) {
-        WizardModel.mana = mana;
-    }
-    public int getLevel() {
-        return level;
-    }
-    public void setLevel(int level) {
-        this.level = level;
-    }
-    public int getExperience() {
-        return experience;
-    }
-
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
-
-    public List<SpellModel> getKnownSpells() {
-        return knownSpells;
     }
 
     public void learnSpell(String spell) {
@@ -97,20 +60,24 @@ public class WizardModel extends CharacterModel {
     }
 
     @Override
+    public void attack(String spellName, EnemyModel enemy) {
+        SpellController spellController = new SpellController(this, knownSpells, spellView);
+        spellController.askSpellAndCast(enemy);
+    }
+
+    @Override
     public void attack(String spellName) {
-        SpellController spellController = new SpellController(this, knownSpells, new SpellView());
-        spellController.askSpellAndCast();
+
     }
 
     @Override
     public void heal() {
         setHealth(getHealth() + 10);
     }
-    public void levelUp() {
-        setLevel(getLevel() + 1);
-    }
 
     public int getVisibility() {
-        return 2;
+        visibilityUser = 2;
+        return visibilityUser;
     }
+
 }

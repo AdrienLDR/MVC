@@ -8,44 +8,47 @@ import View.*;
 import java.util.List;
 import java.util.Scanner;
 
-public class level1 {
-    private static WizardModel wizard;
-    private static TrollModel troll;
-    private static List<SpellModel> knownSpells;
 
-    public static void level1() {
-        wizard = wizard;
-        troll = troll;
-        knownSpells = knownSpells;
+public class Level1 {
 
+    static List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
+
+    public static void level1(WizardModel wizard, EnemyModel enemy) {
         // Initialisation des variables du wizard
-        int visibilityWizard = wizard.getVisibility();
+        int wizardVisibility = wizard.getVisibility();
+        int wizardHealth = wizard.getHealth();
 
         // Initialisation des variables du troll
-        int vieTroll = troll.getHealth();
-        int visibilityTroll = troll.getVisibility();
-
+        TrollModel trollModel = new TrollModel("Troll", 120, AttackModel.getTrollAttacks());
+        int trollHealth = trollModel.getHealth();
+        int trollVisibility = trollModel.getVisibility();
         int lavabo = 0;
+
         System.out.println("Vous êtes maintenant dans les toilettes du château. Vous entendez un bruit bizarre venant de l'une des cabines. En vous approchant, vous remarquez qu'un énorme troll est en train de détruire tout sur son passage.");
 
-        System.out.println("Le troll vous voit et s'approche de vous en hurlant. Vous sortez votre baguette magique et vous vous préparez à l'affronter avec le peu de connaissance que vous avez!.");
+        System.out.println("Le troll vous voit et s'approche de vous en hurlant. Vous sortez votre baguette magique et vous vous préparez à l'affronter avec le peu de connaissances que vous avez!.");
+        while (wizard.getHealth() > 0 && trollModel.getHealth() > 0) {
 
-        Scanner scanner = new Scanner(System.in);
-        while (wizard.getHealth() > 0 && troll.getHealth() > 0) {
-            //demandee d'action qui appelle soit les sort soit les potions
+            Display.displayWizardInfo(wizard.getName(), wizard.getHealth(), wizard.getMana(), wizard.getExperience());
+            Display.displayEnemyInfo(enemy);
+
+            Scanner scanner = new Scanner(System.in);
             // Le wizard choisit son action
-            System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la piece.");
+            System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la pièce.");
 
             int choix = scanner.nextInt();
             if (choix == 1) {
                 SpellController spellController = new SpellController(wizard, knownSpells, new SpellView());
-                spellController.askSpellAndCast();
+                spellController.askSpellAndCast(enemy);
+
             } else if (choix == 2) {
                 PotionController potionController = new PotionController();
                 potionController.useHidePotion(wizard);
+                // Corriger les dégâts infligés au wizard
+                wizardHealth = wizard.getHealth();
             } else if (choix == 3) {
                 // Observation de la piece
-                if (visibilityTroll < 1) {
+                if (trollModel.getVisibility() < 1) {
                     System.out.println("Tu n'y vois pas assez, tu devrais t'éclairer les idées !");
                 } else {
                     System.out.println("Vous distinguez des formes dans la pièce, qu'est-ce qui vous intéresse ?");
@@ -58,8 +61,13 @@ public class level1 {
                         System.out.println("Vous comprenez que vous ne pourrez pas vous enfuir");
                     } else if (objet == 2) {
                         ItemController itemController = new ItemController();
-                        itemController.useLavatoryItem(wizard, troll, lavabo, visibilityTroll);
+                        itemController.useLavatoryItem(wizard, (TrollModel) enemy, lavabo, TrollModel.getVisibility());
+                        // Corriger les dégâts infligés au wizard et à l'ennemi
+                        trollHealth = enemy.getHealth();
+                        wizardHealth = wizard.getHealth();
                     } else if (objet == 3) {
+
+
                         System.out.println("Vous n'avez pas les capacités de déplacer un tel objet.");
                     } else {
                         System.out.println("Objet invalide.");

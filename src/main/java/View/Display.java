@@ -1,5 +1,8 @@
 package View;
 
+import Model.Enemy.TrollModel;
+import Model.EnemyModel;
+
 public class Display {
     public static final String RESET = "\u001B[0m";
     public static final String RED = "\u001B[31m";
@@ -55,12 +58,19 @@ public class Display {
         System.out.println(YELLOW + "-----------------------------------------------" + RESET);
     }
 
-    public static void displayEnemyInfo(String name, int health) {
+    public static void displayEnemyInfo(EnemyModel enemy) {
         System.out.println(YELLOW + "-----------------------------------------------");
-        System.out.print(PURPLE + "Enemy: " + name + "\t");
-        System.out.print(RED + "Health: " + RED + health + "\t");
+        System.out.print(PURPLE + "Enemy: " + enemy.getName() + "\t");
+        System.out.print(RED + "Health: " + RED + enemy.getHealth() + "\t");
+
+        if (enemy instanceof TrollModel) {
+            System.out.println(GREEN + "Visibility: " + ((TrollModel) enemy).getVisibility() + "\t");
+        }
+
         System.out.println(YELLOW + "-----------------------------------------------" + RESET);
-    }public static void displayEnemyNoDamage(String enemyName) {
+    }
+
+    public static void displayEnemyNoDamage(String enemyName) {
         System.out.println(RED + enemyName + " a infligé aucun dégât." + RESET);
     }
 

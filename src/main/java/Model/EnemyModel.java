@@ -20,11 +20,16 @@ public class EnemyModel extends CharacterModel {
     }
 
     @Override
-    public void attack(String spellName) {
+    public void attack(String spellName, EnemyModel enemy) {
         Random random = new Random();
         int index = random.nextInt(attacks.size());
         AttackModel attack = attacks.get(index);
         System.out.println(getName() + " attaque avec " + attack.getName() + " pour " + attack.getDamage() + " points de dégâts !");
+    }
+
+    @Override
+    public void attack(String spellName) {
+
     }
 
     @Override

@@ -2,6 +2,7 @@ package Controller;
 
 import java.util.List;
 
+import Model.EnemyModel;
 import Model.SpellModel;
 import Model.WizardModel;
 import View.SpellView;
@@ -18,10 +19,11 @@ public class SpellController {
     }
 
     public void displaySpells() {
-        SpellView.displaySpells();
+        SpellView.displayKnownSpells(knownSpells);
     }
 
-    public void castSpell(String spellName) {
+
+    public void castSpell(String spellName, EnemyModel enemy) {
         SpellModel spell = getSpell(spellName);
         if (spell == null) {
             view.displayInvalidSpell();
@@ -34,18 +36,21 @@ public class SpellController {
         }
         int damage = spell.getDamage();
         wizard.setMana(wizard.getMana() - spell.getManaCost());
+        enemy.takeDamage(damage);
         view.displayCastSpell(spell.getName(), damage);
     }
 
-    public void askSpellAndCast() {
+
+    public void askSpellAndCast(EnemyModel enemy) {
         SpellView.displayKnownSpells(knownSpells);
         String spellName = view.askSpell(knownSpells);
         if (spellName == null) {
             view.displayInvalidSpell();
             return;
         }
-        castSpell(spellName);
+        castSpell(spellName, enemy); // Pass the enemy object to the castSpell method
     }
+
 
     private SpellModel getSpell(String spellName) {
         for (SpellModel spell : knownSpells) {

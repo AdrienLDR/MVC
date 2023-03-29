@@ -1,4 +1,5 @@
 package Controller;
+
 import Model.WizardModel;
 import Model.HouseModel;
 import View.HouseView;
@@ -13,15 +14,15 @@ public class HouseController {
     }
 
     public void setName(String name) {
-        HouseModel.setHouse(name);
+        model.setHouse(name);
     }
 
     public String getName() {
-        return WizardModel.getName();
+        return model.getHouse();
     }
 
-    public static String chooseHouse(String name) {
-        int choice = HouseView.getHouseChoice();
+    public String chooseHouse(String name) {
+        int choice = view.getHouseChoice();
         String house = null;
         switch (choice) {
             case 1:
@@ -37,8 +38,8 @@ public class HouseController {
                 house = "Slytherin";
                 break;
         }
-        HouseModel.setHouse(house);
-        HouseView.displayHouse(HouseModel.getHouse());
+        model.setHouse(house);
+        view.displayHouse(model.getHouse());
         return house;
     }
 }
