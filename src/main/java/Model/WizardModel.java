@@ -2,7 +2,8 @@ package Model;
 
 import Controller.SpellController;
 import View.SpellView;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;

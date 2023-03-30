@@ -7,27 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="cats sort fonctrionnel mais degats pas bien reparti">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/RewardController.java" afterDir="false" />
+    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="attention tous se casse la gueule">
       <change afterPath="$PROJECT_DIR$/src/main/java/Model/RewardModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/BellatrixLestrangeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/BellatrixLestrangeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/DoloresOmbrageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DoloresOmbrageModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/DétraqueurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DétraqueurModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/MangemortModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/MangemortModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/PeterPettigrewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/PeterPettigrewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/TrollModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/TrollModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/VoldemortModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/VoldemortModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/EnemyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/EnemyModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Display.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,14 +144,22 @@
       <option name="project" value="LOCAL" />
       <updated>1680128407331</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="attention tous se casse la gueule">
+      <created>1680167664265</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680167664265</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MVC" />
     <MESSAGE value="cats sort presque fonctrionnel" />
     <MESSAGE value="cats sort fonctrionnel mais degats pas bien reparti" />
-    <option name="LAST_COMMIT_MESSAGE" value="cats sort fonctrionnel mais degats pas bien reparti" />
+    <MESSAGE value="attention tous se casse la gueule" />
+    <option name="LAST_COMMIT_MESSAGE" value="attention tous se casse la gueule" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
