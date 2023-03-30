@@ -32,7 +32,7 @@ public class Level1 {
             System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la pièce.");
             int choix = scanner.nextInt();
             if (choix == 1) {
-                spellController.askSpellAndCast(trollModel);                // On récupère les sorts choisis par le wizard
+                spellController.askSpellAndCast(trollModel);
             } else if (choix == 2) {
                 PotionController potionController = new PotionController();
                 potionController.useHidePotion(wizard);

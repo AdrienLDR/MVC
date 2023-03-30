@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.Enemy.DementorModel;
+import Model.Enemy.DoloresOmbrageModel;
 import Model.EnemyModel;
 import Model.WizardModel;
 import Model.Enemy.TrollModel;
@@ -22,5 +24,14 @@ public class ItemController {
         } else {
             view.displayInvalidAction();
         }
+    }
+
+    public void useForestItem(WizardModel wizard, DementorModel enemy, int forest, int visibility) {
+    }
+
+    public void useBookItem(WizardModel wizard, DoloresOmbrageModel ombrageModel, int visibility) {
+    }
+
+    public void useParchmentItem(WizardModel wizard, DoloresOmbrageModel ombrageModel) {
     }
 }

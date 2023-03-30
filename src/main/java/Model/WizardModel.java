@@ -12,15 +12,18 @@ import java.util.List;
 @Getter
 public class WizardModel extends CharacterModel {
 
-        public enum House {
-            GRYFFINDOR,
-            HUFFLEPUFF,
-            RAVENCLAW,
-            SLYTHERIN
-        }
+    public void setInvisible(boolean b) {
+    }
 
-        private House house;
-        private String wand;
+    public enum House {
+        GRYFFINDOR,
+        HUFFLEPUFF,
+        RAVENCLAW,
+        SLYTHERIN
+    }
+
+    private House house;
+    private String wand;
     private String pet;
     private int mana;
     private int level;
@@ -29,7 +32,7 @@ public class WizardModel extends CharacterModel {
     private List<SpellModel> availableSpells;
     private SpellView spellView;
     private int visibilityUser;
-
+    private List<String> inventory;
 
     public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience) {
         super(name, health);
@@ -40,6 +43,7 @@ public class WizardModel extends CharacterModel {
         this.experience = experience;
         this.knownSpells = new ArrayList<SpellModel>();
         this.availableSpells = new ArrayList<SpellModel>();
+        this.inventory = new ArrayList<String>();
     }
 
     public void learnSpell(SpellModel spell) {
@@ -65,29 +69,27 @@ public class WizardModel extends CharacterModel {
             if (!spellAlreadyKnown) {
                 SpellModel newSpell = new SpellModel(null, "Unknown effect", 0, 0);
                 availableSpells.add(newSpell);
-
             }
         }
     }
-    public void gainExperience(WizardModel wizard, int i) {
+
+    public void gainExperience(int i) {
         int currentExp = getExperience();
         int newExp = currentExp + 1;
         setExperience(newExp);
     }
 
-
-    public void addHealth(WizardModel wizard, int healthReward) {
+    public void addHealth(int healthReward) {
         int currentHealth = getHealth();
         int newHealth = currentHealth + healthReward;
         setHealth(newHealth);
     }
 
-    public void addMana(WizardModel wizard, int manaReward) {
+    public void addMana(int manaReward) {
         int currentMana = getMana();
         int newMana = currentMana + manaReward;
         setMana(newMana);
     }
-
 
     @Override
     public void attack(String spellName, EnemyModel enemy) {
@@ -104,8 +106,20 @@ public class WizardModel extends CharacterModel {
     public void heal() {
         setHealth(getHealth() + 10);
     }
+
     public House getHouse() {
         return house;
     }
 
+    public List<String> getInventory() {
+        return inventory;
+    }
+
+    public void addToInventory(String item) {
+        inventory.add(item);
+    }
+
+    public void removeFromInventory(String item) {
+        inventory.remove(item);
+    }
 }

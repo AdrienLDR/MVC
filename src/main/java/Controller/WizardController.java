@@ -27,7 +27,7 @@ public class WizardController {
     public void updateView() {
         String name = wizardModel.getName(); // Correction de l'appel
         int health = wizardModel.getHealth();
-        String houseName = houseModel.getHouse(); // Correction de l'appel
+        String houseName = houseModel.getHouseName();
         String petName = petModel.getName();
         String petSpecies = petModel.getSpecies();
         String wandWood = WandModel.getWood();
@@ -53,9 +53,10 @@ public class WizardController {
     }
 
     public void chooseHouse() {
-        String chosenHouse = houseController.chooseHouse(wizardModel.getName());
-        houseModel.setHouse(chosenHouse);
+        String chosenHouse = houseController.chooseHouse().toString();
+        houseModel.setHouseName(chosenHouse);
     }
+
 
     public void choosePet(String name, String species) {
         petModel.setName(name);

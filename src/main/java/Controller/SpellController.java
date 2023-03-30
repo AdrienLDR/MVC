@@ -1,8 +1,9 @@
 package Controller;
 
 import java.util.List;
-import java.util.Map;
 
+import Model.Enemy.PeterPettigrewModel;
+import Model.Enemy.VoldemortModel;
 import Model.EnemyModel;
 import Model.SpellModel;
 import Model.WizardModel;
@@ -40,6 +41,7 @@ public class SpellController {
         enemy.takeDamage(damage);
         view.displayCastSpell(spell.getName(), damage);
         checkLumosSpell(spell);
+        checkAccioSpell(spell,enemy);
     }
 
 
@@ -62,10 +64,25 @@ public class SpellController {
         }
         return null;
     }
+
     private void checkLumosSpell(SpellModel spell) {
         if (spell != null && spell.getName().equalsIgnoreCase("Lumos")) {
             Model.Enemy.TrollModel.setVisibility(2);
             System.out.println("Vous pouvez voir distinctement le troll.");
+        }
+    }
+
+    private void checkAccioSpell(SpellModel spell, EnemyModel enemy) {
+        if (spell != null && spell.getName().equalsIgnoreCase("Accio")) {
+            System.out.println("Vous avez utilisé le sort Accio !");
+            // Vérifier si l'ennemi est Peter Pettigrew ou Voldemort
+            if (enemy instanceof PeterPettigrewModel) {
+                System.out.println("Vous avez attiré le Portolion à vous, mais Peter Pettigrew essaie de vous en empêcher !");
+                spell.setDamage(0);
+            } else if (enemy instanceof VoldemortModel) {
+                System.out.println("Vous avez attiré le Portolion à vous, mais Voldemort essaie de vous en empêcher !");
+                spell.setDamage(0);
+            }
         }
     }
 

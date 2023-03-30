@@ -8,14 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="niveaux avec plein d'erreurs">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/InventaireController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/RewardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/HouseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/HouseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/DementorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DementorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/DoloresOmbrageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DoloresOmbrageModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +40,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -56,7 +64,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NSwLT53i9wE2LnaSwYPfGyMN1l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -189,8 +197,26 @@
       <option name="project" value="LOCAL" />
       <updated>1680200544644</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="niveaux avec plein d'erreurs">
+      <created>1680204416624</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680204416624</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MVC" />

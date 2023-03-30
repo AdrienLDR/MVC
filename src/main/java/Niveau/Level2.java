@@ -51,7 +51,7 @@ public class Level2 {
                     wizard.getInventory().remove("Croc du basilic");
                     basiliskModel.takeDamage(100);
                 } else {
-                    System.out.println("Vous n'avez pas les moyens de vaincre le basilic !");
+                    spellController.askSpellAndCast(basiliskModel);
                 }
             } else if (choix == 2) {
                 PotionController potionController = new PotionController();
@@ -81,7 +81,7 @@ public class Level2 {
                         continue;
                     }
                 }
-                enemy.attack(attack, wizard);
+                enemy.attack(attack, enemy);
                 if (wizard.getHealth() <= 0) {
                     System.out.println("Vous êtes mort...");
                 } else if (enemy instanceof BasiliskModel && hasTooth) {

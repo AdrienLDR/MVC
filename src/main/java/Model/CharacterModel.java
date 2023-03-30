@@ -38,4 +38,11 @@ public abstract class CharacterModel {
     public void setHealth(int health) {
         this.health = health;
     }
+
+    public void restoreHealth(int healAmount) {
+        int currentHealth = getHealth();
+        int newHealth = currentHealth + healAmount;
+        setHealth(newHealth);
+
+    }
 }

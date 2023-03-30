@@ -18,11 +18,12 @@ public class Level3 {
         dementorModel.getHealth();
         dementorModel.getVisibility();
         int forest = 0;
-        SpellModel expectoPatronum;
         System.out.println("Vous êtes dans la forêt interdite. Vous entendez des cris et des pleurs, et vous voyez des ombres s'approcher de vous. Ce sont les Détraqueurs, et ils sont très dangereux.");
 
         System.out.println("Les Détraqueurs se rapprochent de vous, et vous commencez à sentir leur souffle glacé sur votre visage. Vous sortez votre baguette magique et vous vous préparez à l'affronter.");
         SpellController spellController = new SpellController(wizard, knownSpells, new SpellView());
+
+        knownSpells.add(new SpellModel("Expecto Patronum", "Sortilège du Patronus", 50, 40));
 
         while (wizard.getHealth() > 0 && dementorModel.getHealth() > 0) {
             Display.displayWizardInfo(wizard.getName(), wizard.getHealth(), wizard.getMana(), wizard.getExperience());
@@ -32,9 +33,8 @@ public class Level3 {
             System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la forêt.");
             int choix = scanner.nextInt();
             if (choix == 1) {
-                expectoPatronum = spellController.getSpell("Expecto Patronum");
-                expectoPatronum.setDamage(80);
-                spellController.castSpell(expectoPatronum, dementorModel);
+                spellController.askSpellAndCast(dementorModel);
+
             } else if (choix == 2) {
                 PotionController potionController = new PotionController();
                 potionController.useHidePotion(wizard);
@@ -82,7 +82,7 @@ public class Level3 {
         }
         if (dementorModel.getHealth() > 0) {
 // Attaque du dementor si il n'est pas vaincu
-            dementorModel.attack(wizard);
+            enemy.attack(attack, enemy);
         }
     }
 if (wizard.getHealth() > 0) {
