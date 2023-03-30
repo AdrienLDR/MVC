@@ -6,8 +6,8 @@ import Model.WizardModel;
 
 import java.util.List;
 
-public class DétraqueurModel extends EnemyModel {
-    public DétraqueurModel(String name, int health, List<AttackModel> détraqueurAttacks, WizardModel wizard) {
+public class DementorModel extends EnemyModel {
+    public DementorModel(String name, int health, List<AttackModel> detraqueurAttacks, WizardModel wizard) {
         super("Dementors", 80, AttackModel.getDementorAttacks(),wizard);
     }
 }

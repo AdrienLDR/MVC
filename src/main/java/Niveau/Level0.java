@@ -48,6 +48,5 @@ public class Level0 {
         RewardController.giveRewardToWizard(wizardController.getWizardModel());
         Level1.level1(wizardModel, new TrollModel("Troll", 120, AttackModel.getTrollAttacks(), wizardModel));
 
-
     }
 }

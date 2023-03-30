@@ -16,11 +16,9 @@ public class ItemController {
         if (action == 1) {
             view.displayCleaningResult();
             troll.setHealth(troll.getHealth() - 2);
-            view.displayTrollHealth();
         } else if (action == 2) {
             view.displaySlipperyResult();
             troll.setHealth(troll.getHealth() - 4);
-            view.displayTrollHealth();
         } else {
             view.displayInvalidAction();
         }

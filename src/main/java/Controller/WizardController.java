@@ -61,7 +61,7 @@ public class WizardController {
         petModel.setName(name);
         petModel.setSpecies(species);
     }
-    public void learnSpell(String spell) {
+    public void learnSpell(SpellModel spell) {
         wizardModel.learnSpell(spell);
         updateView();
     }

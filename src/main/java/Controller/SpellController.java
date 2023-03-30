@@ -1,6 +1,7 @@
 package Controller;
 
 import java.util.List;
+import java.util.Map;
 
 import Model.EnemyModel;
 import Model.SpellModel;
@@ -38,6 +39,7 @@ public class SpellController {
         wizard.setMana(wizard.getMana() - spell.getManaCost());
         enemy.takeDamage(damage);
         view.displayCastSpell(spell.getName(), damage);
+        checkLumosSpell(spell);
     }
 
 
@@ -60,4 +62,11 @@ public class SpellController {
         }
         return null;
     }
+    private void checkLumosSpell(SpellModel spell) {
+        if (spell != null && spell.getName().equalsIgnoreCase("Lumos")) {
+            Model.Enemy.TrollModel.setVisibility(2);
+            System.out.println("Vous pouvez voir distinctement le troll.");
+        }
+    }
+
 }

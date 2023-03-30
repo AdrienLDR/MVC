@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 @Getter
 public class WizardModel extends CharacterModel {
-    
+
     private String wand;
     private String pet;
     private int mana;
@@ -34,18 +34,19 @@ public class WizardModel extends CharacterModel {
         this.availableSpells = new ArrayList<SpellModel>();
     }
 
-    public void learnSpell(String spell) {
+    public void learnSpell(SpellModel spell) {
         for (SpellModel availableSpell : availableSpells) {
             if (availableSpell.getName().equals(spell)) {
                 knownSpells.add(availableSpell);
                 availableSpells.remove(availableSpell);
+                updateAvailableSpells((List<SpellModel>) spell);
                 break;
             }
         }
     }
 
-    public void updateAvailableSpells(List<String> allSpells) {
-        for (String spellName : allSpells) {
+    public void updateAvailableSpells(List<SpellModel> spell) {
+        for (SpellModel spellName : spell) {
             boolean spellAlreadyKnown = false;
             for (SpellModel knownSpell : knownSpells) {
                 if (knownSpell.getName().equals(spellName)) {
@@ -54,7 +55,7 @@ public class WizardModel extends CharacterModel {
                 }
             }
             if (!spellAlreadyKnown) {
-                SpellModel newSpell = new SpellModel(spellName, "Unknown effect", 0, 0);
+                SpellModel newSpell = new SpellModel(null, "Unknown effect", 0, 0);
                 availableSpells.add(newSpell);
 
             }
@@ -64,7 +65,6 @@ public class WizardModel extends CharacterModel {
         int currentExp = getExperience();
         int newExp = currentExp + 1;
         setExperience(newExp);
-        WizardController.updateView();
     }
 
 
@@ -72,14 +72,12 @@ public class WizardModel extends CharacterModel {
         int currentHealth = getHealth();
         int newHealth = currentHealth + healthReward;
         setHealth(newHealth);
-        WizardController.updateView();
     }
 
     public void addMana(WizardModel wizard, int manaReward) {
         int currentMana = getMana();
         int newMana = currentMana + manaReward;
         setMana(newMana);
-        WizardController.updateView();
     }
 
 

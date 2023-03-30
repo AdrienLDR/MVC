@@ -22,7 +22,7 @@ public class TrollModel extends EnemyModel {
     }
 
     // Setter pour la visibilité du troll
-    public void setVisibility(int visibility) {
+    public static void setVisibility(int visibility) {
         TrollModel.visibility = visibility;
     }
 

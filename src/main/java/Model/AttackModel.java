@@ -54,7 +54,7 @@ public class AttackModel {
     public static List<AttackModel> getVoldemortAttacks() {
 
         List<AttackModel> voldemortAttacks = new ArrayList<>();
-            voldemortAttacks.add(new AttackModel("Avada Kedavra", 50));
+            voldemortAttacks.add(new AttackModel("Avada Kedavra", 500));
             voldemortAttacks.add(new AttackModel("Imperium", 25));
             voldemortAttacks.add(new AttackModel("Crucio", 35));
         return voldemortAttacks;
