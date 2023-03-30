@@ -1,14 +1,12 @@
 package Niveau;
 
-import Model.AttackModel;
+import Model.*;
 import View.Display;
 import Controller.PotionController;
 import Controller.RewardController;
 import Controller.SpellController;
-import Model.EnemyModel;
 import Model.Enemy.BasiliskModel;
-import Model.SpellModel;
-import Model.WizardModel;
+import View.HouseView;
 import View.SpellView;
 
 import java.util.List;
@@ -24,7 +22,7 @@ public class Level2 {
         BasiliskModel basiliskModel = new BasiliskModel("Basilisk", 200, AttackModel.getBasiliskAttacks(), wizard);
         basiliskModel.getHealth();
         basiliskModel.getVisibility();
-        boolean hasSword = wizard.getHouse().equals(WizardModel.House.GRYFFINDOR);
+        boolean hasSword = WizardModel.House.GRYFFINDOR.equals(wizard.getHouse());
         boolean hasTooth = false;
 
         System.out.println("Vous êtes maintenant dans la Chambre des Secrets. Vous êtes face au terrible basilic !");

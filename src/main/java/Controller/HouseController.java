@@ -1,7 +1,7 @@
 package Controller;
 
-import Model.WizardModel;
 import Model.HouseModel;
+import Model.WizardModel;
 import View.HouseView;
 
 public class HouseController {
@@ -13,33 +13,34 @@ public class HouseController {
         this.view = view;
     }
 
-    public void setName(String name) {
-        model.setHouse(name);
+    public void setHouseName(String houseName) {
+        model.setHouseName(houseName);
     }
 
-    public String getName() {
-        return model.getHouse();
+    public String getHouseName() {
+        return model.getHouseName();
     }
 
-    public String chooseHouse(String name) {
+    public WizardModel.House chooseHouse() {
         int choice = view.getHouseChoice();
-        String house = null;
+        WizardModel.House house = null;
         switch (choice) {
             case 1:
-                house = "Gryffindor";
+                house = WizardModel.House.GRYFFINDOR;
                 break;
             case 2:
-                house = "Hufflepuff";
+                house = WizardModel.House.HUFFLEPUFF;
                 break;
             case 3:
-                house = "Ravenclaw";
+                house = WizardModel.House.RAVENCLAW;
                 break;
             case 4:
-                house = "Slytherin";
+                house = WizardModel.House.SLYTHERIN;
                 break;
         }
-        model.setHouse(house);
-        view.displayHouse(model.getHouse());
+        model.setHouseName(house.toString());
+        view.displayHouse(model.getHouseName());
         return house;
     }
 }
+

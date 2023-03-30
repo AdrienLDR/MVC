@@ -7,24 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="toujours des problemes avec les reward dans les niveaux">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level7.java" afterDir="false" />
+    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="niveaux avec plein d'erreurs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/AttackModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/AttackModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/DétraqueurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DementorModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/TrollModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/TrollModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/HouseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/HouseModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680172534637</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="niveaux avec plein d'erreurs">
+      <created>1680200544644</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680200544644</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -201,7 +199,8 @@
     <MESSAGE value="attention tous se casse la gueule" />
     <MESSAGE value="&#10;dry" />
     <MESSAGE value="toujours des problemes avec les reward dans les niveaux" />
-    <option name="LAST_COMMIT_MESSAGE" value="toujours des problemes avec les reward dans les niveaux" />
+    <MESSAGE value="niveaux avec plein d'erreurs" />
+    <option name="LAST_COMMIT_MESSAGE" value="niveaux avec plein d'erreurs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

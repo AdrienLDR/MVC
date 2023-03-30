@@ -8,7 +8,7 @@ import lombok.Setter;
 public abstract class CharacterModel {
     @Getter @Setter
     private String name;
-    @Getter @Setter
+    @Getter
     private int health;
 
     public CharacterModel(String name, int health ) {

@@ -28,8 +28,9 @@ public class Level0 {
         wizardController.chooseName(wizardName);
 
         // choose wizard house
-        String chosenHouse = houseController.chooseHouse(wizardName);
-        HouseModel.setHouse(chosenHouse);
+        WizardModel.House chosenHouse = houseController.chooseHouse();
+        houseModel.setHouseName(chosenHouse.toString());
+
 
         // create wand
         WandModel wandModel = new WandModel();

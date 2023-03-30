@@ -1,13 +1,13 @@
 package Model;
-
 public class HouseModel {
-    private static String house;
+    private String houseName;
 
-    public static void setHouse(String house) {
-        HouseModel.house = house;
+    public void setHouseName(String houseName) {
+        this.houseName = houseName;
     }
 
-    public static String getHouse() {
-        return house;
+    public String getHouseName() {
+        return houseName;
     }
 }
+

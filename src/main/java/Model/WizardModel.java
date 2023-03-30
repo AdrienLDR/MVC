@@ -12,7 +12,15 @@ import java.util.List;
 @Getter
 public class WizardModel extends CharacterModel {
 
-    private String wand;
+        public enum House {
+            GRYFFINDOR,
+            HUFFLEPUFF,
+            RAVENCLAW,
+            SLYTHERIN
+        }
+
+        private House house;
+        private String wand;
     private String pet;
     private int mana;
     private int level;
@@ -95,6 +103,9 @@ public class WizardModel extends CharacterModel {
     @Override
     public void heal() {
         setHealth(getHealth() + 10);
+    }
+    public House getHouse() {
+        return house;
     }
 
 }
