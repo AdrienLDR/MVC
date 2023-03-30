@@ -11,7 +11,7 @@ public class Level0 {
     public static void main(String[] args) {
 
         // create wizard
-        WizardModel wizardModel = new WizardModel(null, 100, 1, null, null, 50, 0);
+        WizardModel wizardModel = new WizardModel(null, 100, 1, null, null, 50, 1);
         WizardView wizardView = new WizardView();
         PetModel petModel = new PetModel();
         List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
@@ -45,7 +45,9 @@ public class Level0 {
 
         // display wizard info
         wizardController.updateView();
+        RewardController.giveRewardToWizard(wizardController.getWizardModel());
+        Level1.level1(wizardModel, new TrollModel("Troll", 120, AttackModel.getTrollAttacks(), wizardModel));
 
-        Level1.level1(wizardModel, new TrollModel("Troll", 120, AttackModel.getTrollAttacks()));
+
     }
 }

@@ -1,6 +1,7 @@
 package Model;
 
 import Controller.SpellController;
+import Controller.WizardController;
 import View.SpellView;
 import lombok.Getter;
 import lombok.Setter;
@@ -59,6 +60,28 @@ public class WizardModel extends CharacterModel {
             }
         }
     }
+    public void gainExperience(WizardModel wizard, int i) {
+        int currentExp = getExperience();
+        int newExp = currentExp + 1;
+        setExperience(newExp);
+        WizardController.updateView();
+    }
+
+
+    public void addHealth(WizardModel wizard, int healthReward) {
+        int currentHealth = getHealth();
+        int newHealth = currentHealth + healthReward;
+        setHealth(newHealth);
+        WizardController.updateView();
+    }
+
+    public void addMana(WizardModel wizard, int manaReward) {
+        int currentMana = getMana();
+        int newMana = currentMana + manaReward;
+        setMana(newMana);
+        WizardController.updateView();
+    }
+
 
     @Override
     public void attack(String spellName, EnemyModel enemy) {
@@ -74,11 +97,6 @@ public class WizardModel extends CharacterModel {
     @Override
     public void heal() {
         setHealth(getHealth() + 10);
-    }
-
-    public int getVisibility() {
-        visibilityUser = 2;
-        return visibilityUser;
     }
 
 }

@@ -61,18 +61,11 @@ public class WizardController {
         petModel.setName(name);
         petModel.setSpecies(species);
     }
-
-    public void gainExperience(int amount) {
-        int currentExp = wizardModel.getExperience();
-        int newExp = currentExp + amount;
-        wizardModel.setExperience(newExp);
-        updateView();
-    }
-
     public void learnSpell(String spell) {
         wizardModel.learnSpell(spell);
         updateView();
     }
+
 
     public void castSpell(String spellName) {
         wizardModel.attack(spellName);

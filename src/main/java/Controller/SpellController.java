@@ -52,7 +52,7 @@ public class SpellController {
     }
 
 
-    private SpellModel getSpell(String spellName) {
+    public SpellModel getSpell(String spellName) {
         for (SpellModel spell : knownSpells) {
             if (spell.getName().equalsIgnoreCase(spellName)) {
                 return spell;
