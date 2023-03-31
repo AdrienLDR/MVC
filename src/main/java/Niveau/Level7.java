@@ -9,10 +9,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Level7 {
-    static List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
-    static String attack = AttackModel.getVoldemortAttacks().toString();
+    SpellModel spellModel = new SpellModel("","",0,0);
 
-    public static void level7(WizardModel wizard, EnemyModel enemy) {
+    List<SpellModel> knownSpells = spellModel.getKnownSpells();    static String attack = AttackModel.getVoldemortAttacks().toString();
+
+    public void level7(WizardModel wizard, EnemyModel enemy, BellatrixLestrangeModel bellatrixLestrange) {
         Display display = new Display();
 
         wizard.getHealth();

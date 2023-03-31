@@ -14,11 +14,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Level2 {
-    static List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
+    SpellModel spellModel = new SpellModel("","",0,0);
 
+    List<SpellModel> knownSpells = spellModel.getKnownSpells();
     static String attack = AttackModel.getBasiliskAttacks().toString();
 
-    public static void level2(WizardModel wizard, EnemyModel enemy) {
+    public void level2(WizardModel wizard, EnemyModel enemy) {
 
         Display display = new Display();
 
@@ -108,8 +109,6 @@ public class Level2 {
                 System.out.println("Vous avez vaincu le basilic !");
                 RewardController.giveRewardToWizard(wizard);
             }
-
-            Level3.level3(wizard, new EnemyModel("Dementor", 150, AttackModel.getDementorAttacks(), wizard));
         }
     }
 }}

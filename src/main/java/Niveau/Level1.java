@@ -2,7 +2,6 @@ package Niveau;
 
 import Controller.*;
 import Model.*;
-import Model.Enemy.BasiliskModel;
 import Model.Enemy.TrollModel;
 import View.*;
 
@@ -10,12 +9,13 @@ import java.util.List;
 import java.util.Scanner;
 public class Level1 {
 
-    static List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
-    static String attack = AttackModel.getTrollAttacks().toString();
+    SpellModel spellModel = new SpellModel("","",0,0);
 
-    public static void level1(WizardModel wizard, EnemyModel enemy) {
+    List<SpellModel> knownSpells = spellModel.getKnownSpells();    static String attack = AttackModel.getTrollAttacks().toString();
+
+    public void level1(WizardModel wizard, EnemyModel enemy) {
         Display display = new Display();
-
+        wizard.getName();
         wizard.getHealth();
         TrollModel trollModel = new TrollModel("Troll", 120, AttackModel.getTrollAttacks(),wizard);
         trollModel.getHealth();
@@ -85,6 +85,6 @@ public class Level1 {
 
         }
         RewardController.giveRewardToWizard(wizard);
-        Level2.level2(wizard,new BasiliskModel("Basilisk", 200, AttackModel.getBasiliskAttacks(), wizard));
+
     }
 }

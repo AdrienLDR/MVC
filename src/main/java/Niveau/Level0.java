@@ -2,16 +2,15 @@ package Niveau;
 
 import Controller.*;
 import Model.*;
-import Model.Enemy.*;
 import View.*;
 
 import java.util.List;
 
 public class Level0 {
-    public static void main(String[] args) {
+    public void level0(WizardModel args) {
 
         // create wizard
-        WizardModel wizardModel = new WizardModel(null, 100, 1, null, null, 50, 1);
+        WizardModel wizardModel = new WizardModel(null, 500, 1, null, null, 200, 1,null,null,null);
         WizardView wizardView = new WizardView();
         PetModel petModel = new PetModel();
         List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
@@ -45,11 +44,10 @@ public class Level0 {
         petController.choosePet(wizardModel);
 
         // display wizard info
+
         wizardController.updateView();
         RewardController.giveRewardToWizard(wizardController.getWizardModel());
 
-        Level5.level5(wizardModel,new DoloresOmbrageModel("Dolores Ombrage", 1000, AttackModel.getOmbrageAttacks(), wizardModel));
 
-        Level1.level1(wizardModel,new TrollModel("Troll", 120, AttackModel.getTrollAttacks(), wizardModel));
     }
 }

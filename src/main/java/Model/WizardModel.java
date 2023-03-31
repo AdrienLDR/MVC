@@ -1,7 +1,6 @@
 package Model;
 
 import Controller.SpellController;
-import Controller.WizardController;
 import View.SpellView;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,16 +34,27 @@ public class WizardModel extends CharacterModel {
     private int visibilityUser;
     private List<String> inventory;
 
-    public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience) {
+    public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience, List<SpellModel> knownSpells, List<SpellModel> availableSpells, List<String> inventory) {
         super(name, health);
         this.level = level;
         this.wand = wand;
         this.pet = pet;
         this.mana = mana;
         this.experience = experience;
-        this.knownSpells = new ArrayList<SpellModel>();
-        this.availableSpells = new ArrayList<SpellModel>();
-        this.inventory = new ArrayList<String>();
+        this.knownSpells = knownSpells;
+        this.availableSpells = availableSpells;
+        this.inventory = inventory;
+    }
+    public String getWandWood() {
+        return WandModel.getWood();
+    }
+
+    public String getWandCore() {
+        return WandModel.getCore();
+    }
+
+    public int getWandLength() {
+        return WandModel.getLength();
     }
 
     public void setInvisible(boolean b) {
@@ -54,37 +64,33 @@ public class WizardModel extends CharacterModel {
         return core;
     }
 
-
     public void learnSpell(SpellModel spell) {
         for (SpellModel availableSpell : availableSpells) {
             if (availableSpell.getName().equals(spell)) {
                 knownSpells.add(availableSpell);
                 availableSpells.remove(availableSpell);
-                updateAvailableSpells((List<SpellModel>) spell);
+                updateAvailableSpells(spell);
                 break;
             }
         }
     }
 
-    public void updateAvailableSpells(List<SpellModel> spell) {
-        for (SpellModel spellName : spell) {
-            boolean spellAlreadyKnown = false;
-            for (SpellModel knownSpell : knownSpells) {
-                if (knownSpell.getName().equals(spellName)) {
-                    spellAlreadyKnown = true;
-                    break;
-                }
+    public void updateAvailableSpells(SpellModel spell) {
+        boolean spellAlreadyKnown = false;
+        for (SpellModel knownSpell : knownSpells) {
+            if (knownSpell.getName().equals(spell.getName())) {
+                spellAlreadyKnown = true;
+                break;
             }
-            if (!spellAlreadyKnown) {
-                SpellModel newSpell = new SpellModel(null, "Unknown effect", 0, 0);
-                availableSpells.add(newSpell);
-            }
+        }
+        if (!spellAlreadyKnown) {
+            availableSpells.add(spell);
         }
     }
 
     public void gainExperience(int i) {
         int currentExp = getExperience();
-        int newExp = currentExp + 1;
+        int newExp = currentExp + i;
         setExperience(newExp);
     }
 

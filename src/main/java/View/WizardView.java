@@ -1,11 +1,14 @@
 package View;
 
+import java.util.List;
 import java.util.Scanner;
 
 import Model.SpellModel;
 
 public class WizardView {
     private static final Scanner scanner = new Scanner(System.in);
+    SpellModel spellModel = new SpellModel("","",0,0);
+
 
     public static String askForName() {
         System.out.print("Enter your name: ");
@@ -18,8 +21,11 @@ public class WizardView {
         Display.displayHouseInfo(houseName);
         Display.displayPetInfo(petName, petSpecies);
         Display.displayWandInfo(wandWood, wandCore, wandLength);
-        SpellView.displayKnownSpells(SpellModel.getKnownSpells());
 
+        SpellModel spellModel = new SpellModel("","",0,0);
+        List<SpellModel> knownSpells = spellModel.getKnownSpells();
+        SpellView spellView = new SpellView();
+        spellView.displayKnownSpells(knownSpells);
     }
 
 }

@@ -9,6 +9,8 @@ import Model.SpellModel;
 public class SpellView {
 
     private Scanner scanner;
+    SpellModel spellModel = new SpellModel("","",0,0);
+
 
     public SpellView() {
         scanner = new Scanner(System.in);
@@ -21,10 +23,11 @@ public class SpellView {
         }
     }
 
-    public static void displayKnownSpells(List<SpellModel> knownSpells) {
+    public void displayKnownSpells(List<SpellModel> knownSpells) {
         System.out.println("Known spells:");
 
-        for (SpellModel spell : SpellModel.getKnownSpells()) {
+        for (SpellModel spell :spellModel.getKnownSpells()
+) {
             System.out.println(spell.getName() + " - " + spell.getEffect() + " (Damage: " + spell.getDamage() + ", Mana cost: " + spell.getManaCost() + ")");
         }
     }

@@ -66,7 +66,7 @@ public class SpellModel {
         return availableSpells;
     }
 
-    public static List<SpellModel> getKnownSpells() {
+    public List<SpellModel> getKnownSpells() {
         List<SpellModel> knownSpells = new ArrayList<>();
         // Ajouter les sorts connus
         knownSpells.add(new SpellModel("Lumos", "Sortilège d'éclairage", 5, 2));

@@ -11,10 +11,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Level3 {
-    static List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
-    static String attack = AttackModel.getDementorAttacks().toString();
+    SpellModel spellModel = new SpellModel("","",0,0);
 
-    public static void level3(WizardModel wizard, EnemyModel enemy) {
+    List<SpellModel> knownSpells = spellModel.getKnownSpells();    static String attack = AttackModel.getDementorAttacks().toString();
+
+    public void level3(WizardModel wizard, EnemyModel enemy) {
 
         Display display = new Display();
 
@@ -116,7 +117,5 @@ public class Level3 {
                     }
                 }
                 RewardController.giveRewardToWizard(wizard);
-                Level4.level4(wizard, new VoldemortModel("Voldemort", 400, AttackModel.getVoldemortAttacks(), wizard,"en Plume de Phoenix"),
-        new PeterPettigrewModel("Peter Pettigrew", 120, AttackModel.getPettigrewAttacks(), wizard));
             }
         }

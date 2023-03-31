@@ -11,10 +11,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Level4 {
-    static List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
+    Level5 level5 = new Level5();
+
+    SpellModel spellModel = new SpellModel("","",0,0);
+
+    List<SpellModel> knownSpells = spellModel.getKnownSpells();
     static String attack = AttackModel.getVoldemortAttacks().toString();
 
-    public static void level4(WizardModel wizard, EnemyModel voldemort, EnemyModel peter ) {
+    public void level4(WizardModel wizard, EnemyModel voldemort, EnemyModel peter ) {
 
         Display display = new Display();
 
@@ -67,7 +71,7 @@ public class Level4 {
 
             }
         }
-        Level5.level5(wizard,new DoloresOmbrageModel("Dolores Ombrage", 250, AttackModel.getOmbrageAttacks(), wizard));
+
 
     }
 }

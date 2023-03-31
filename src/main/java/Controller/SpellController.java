@@ -24,9 +24,7 @@ public class SpellController {
     public static boolean getHasTooth() {return hasTooth;
     }
 
-    public void displaySpells() {
-        SpellView.displayKnownSpells(knownSpells);
-    }
+
 
     public void castSpell(String spellName, EnemyModel enemy) {
         SpellModel spell = getSpell(spellName);
@@ -49,15 +47,16 @@ public class SpellController {
     }
 
     public void askSpellAndCast(EnemyModel enemy) {
-        SpellView.displayKnownSpells(knownSpells);
+        view.displayKnownSpells(knownSpells); // corrected line
         String spellName = view.askSpell(knownSpells);
         if (spellName == null) {
             view.displayInvalidSpell();
 
             return;
         }
-        castSpell(spellName, enemy); // Pass the enemy object to the castSpell method
+        castSpell(spellName, enemy);
     }
+
 
     public SpellModel getSpell(String spellName) {
         for (SpellModel spell : knownSpells) {

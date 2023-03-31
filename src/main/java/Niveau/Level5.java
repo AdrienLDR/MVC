@@ -3,15 +3,17 @@ package Niveau;
 import Controller.*;
 import Model.*;
 import Model.Enemy.DoloresOmbrageModel;
+import Model.Enemy.MangemortModel;
 import View.*;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class Level5 {
-    static List<SpellModel> knownSpells = SpellModel.getAvailableSpells();
-    static String attack = AttackModel.getOmbrageAttacks().toString();
-    public static void level5(WizardModel wizard, EnemyModel enemy) {
+    SpellModel spellModel = new SpellModel("","",0,0);
+
+    List<SpellModel> knownSpells = spellModel.getKnownSpells();    static String attack = AttackModel.getOmbrageAttacks().toString();
+    public void level5(WizardModel wizard, EnemyModel enemy) {
 
         Display display = new Display();
 
@@ -31,7 +33,7 @@ public class Level5 {
         System.out.println("Vous vous préparez à affronter Dolores Ombrage avec votre baguette magique en main.");
         SpellController spellController = new SpellController(wizard, knownSpells, new SpellView());
 
-        while (wizard.getHealth() > 0 && doloresOmbrageModel.getHealth() > 0) {
+        while (enemy.getHealth() > 0 && wizard.getHealth() > 0) {
 
             Display.displayWizardInfo(wizard.getName(), wizard.getHealth(), wizard.getMana(), wizard.getExperience());
             display.displayEnemyInfo(enemy);
@@ -63,7 +65,6 @@ public class Level5 {
                         if (feuxDartifice == 3) {
                             System.out.println("Vous avez maintenant suffisamment de feux d'artifice pour mettre en place votre distraction !");
                             System.out.println("Il faut juste pouvoir les allumer !");
-
                             Incendio = spellController.getSpell("Incendio");
                             Incendio.setDamage(1000);}
                     } else if (objet == 2) {
@@ -94,13 +95,12 @@ public class Level5 {
                 }
             }
         }
-            if (wizard.getHealth() > 0) {
+        if (wizard.getHealth() > 0) {
 // le joueur a réussi à vaincre l'ennemi
-                System.out.println("Félicitations, vous avez réussi à distraire Dolores Ombrage et à passer votre BUSE !");
-                Level6.level6(wizard,enemy);
-            } else {
+            System.out.println("Félicitations, vous avez réussi à distraire Dolores Ombrage et à passer votre BUSE !");
+        } else {
 // le joueur a perdu tous ses points de vie
-                System.out.println("Vous avez échoué à passer votre BUSE !");
+            System.out.println("Vous avez échoué à passer votre BUSE !");
         }
     }
 }
