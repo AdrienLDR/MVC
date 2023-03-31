@@ -2,6 +2,7 @@ package Niveau;
 
 import Controller.HouseController;
 import Model.*;
+import Model.Enemy.DementorModel;
 import View.Display;
 import Controller.PotionController;
 import Controller.RewardController;

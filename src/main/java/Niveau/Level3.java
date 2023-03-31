@@ -19,8 +19,10 @@ public class Level3 {
         wizard.getHealth();
         DementorModel dementorModel = new DementorModel("Dementor", 150, AttackModel.getDementorAttacks(), wizard);
         dementorModel.getHealth();
-        dementorModel.getVisibility();
+
+
         int forest = 0;
+
         System.out.println("Vous êtes dans la forêt interdite. Vous entendez des cris et des pleurs, et vous voyez des ombres s'approcher de vous. Ce sont les Détraqueurs, et ils sont très dangereux.");
 
         System.out.println("Les Détraqueurs se rapprochent de vous, et vous commencez à sentir leur souffle glacé sur votre visage. Vous sortez votre baguette magique et vous vous préparez à l'affronter.");
@@ -41,7 +43,6 @@ public class Level3 {
             } else if (choix == 2) {
                 PotionController potionController = new PotionController();
                 potionController.useHidePotion(wizard);
-                // Corriger les dégâts infligés au wizard
                 wizard.getHealth();
             } else if (choix == 3) {
                 // Observation de la forêt
@@ -82,20 +83,17 @@ public class Level3 {
                         }
                     }
                 }
-
-                if (dementorModel.getHealth() > 0) {
-// Attaque du dementor si il n'est pas vaincu
-                    enemy.attack(attack, enemy);
-                }
-                if (wizard.getHealth() > 0) {
-                    System.out.println("Vous avez vaincu le Dementor !");
-                    wizard.setExperience(wizard.getExperience() + 50);
-                } else {
-                    System.out.println("Vous avez été vaincu par le Dementor...");
-                }
+            }
+            if (enemy.getHealth() > 0) {
+                enemy.attack(attack, enemy);}
+            if (wizard.getHealth() <= 0) {
+                System.out.println("Vous êtes mort...");
+            } else if (dementorModel.getHealth() <= 0) {
+                System.out.println("Vous avez vaincu le troll !");
             }
         }
-        Level4.level4(wizard, enemy);
-
+        RewardController.giveRewardToWizard(wizard);
+        Level4.level4(wizard,enemy);
     }
 }
+

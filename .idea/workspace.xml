@@ -9,11 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="niveaux sans erreur mais ils s'enchaine pas encoree et logique des niveaux pas faitees">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/HouseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/DementorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DementorModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680230744365</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="niveaux sans erreur mais ils s'enchaine pas encoree et logique des niveaux pas faitees">
+      <created>1680252232024</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680252232024</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
