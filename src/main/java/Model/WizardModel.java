@@ -12,7 +12,6 @@ import java.util.List;
 @Getter
 public class WizardModel extends CharacterModel {
 
-
     public enum House {
         GRYFFINDOR,
         HUFFLEPUFF,
@@ -36,6 +35,7 @@ public class WizardModel extends CharacterModel {
 
     public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience, List<SpellModel> knownSpells, List<SpellModel> availableSpells, List<String> inventory) {
         super(name, health);
+        this.setName(name);
         this.level = level;
         this.wand = wand;
         this.pet = pet;
@@ -45,6 +45,7 @@ public class WizardModel extends CharacterModel {
         this.availableSpells = availableSpells;
         this.inventory = inventory;
     }
+
     public String getWandWood() {
         return WandModel.getWood();
     }

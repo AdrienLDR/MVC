@@ -7,24 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="niveaux sans erreur">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="niveaux fonctionnel mais pb de main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/RewardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/RewardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SpellModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/SpellView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/SpellView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/WizardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/WizardView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680276756767</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="niveaux fonctionnel mais pb de main">
+      <created>1680298319488</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1680298319488</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -286,7 +280,8 @@
     <MESSAGE value="niveaux avec erreurs" />
     <MESSAGE value="niveaux sans erreur mais ils s'enchaine pas encoree et logique des niveaux pas faitees" />
     <MESSAGE value="niveaux sans erreur" />
-    <option name="LAST_COMMIT_MESSAGE" value="niveaux sans erreur" />
+    <MESSAGE value="niveaux fonctionnel mais pb de main" />
+    <option name="LAST_COMMIT_MESSAGE" value="niveaux fonctionnel mais pb de main" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

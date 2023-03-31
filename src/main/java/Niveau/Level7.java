@@ -6,6 +6,7 @@ import Model.Enemy.*;
 import View.*;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Level7 {
@@ -43,7 +44,7 @@ public class Level7 {
                     System.out.println("1 Oui\n2 Non");
                     int reponse = scanner.nextInt();
                     if (reponse == 1) {
-                        if (wizard.getCore() == voldemortModel.getCore()) {
+                        if (Objects.equals(wizard.getCore(), voldemortModel.getCore())) {
                             System.out.println("Votre baguette et celle de Voldemort partagent le même coeur !");
                             System.out.println("Les effets de votre sort sont imprévisibles...");
                             System.out.println("Vous avez une chance de le blesser mortellement mais vous prenez aussi le risque de vous blesser !");
