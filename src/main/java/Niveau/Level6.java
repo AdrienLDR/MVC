@@ -13,6 +13,8 @@ public class Level6 {static List<SpellModel> knownSpells = SpellModel.getAvailab
 
     public static void level6(WizardModel wizard, EnemyModel enemy) {
 
+        Display display = new Display();
+
         wizard.getHealth();
         MangemortModel mangemortModel = new MangemortModel("Mangemort", 150, AttackModel.getDeathEaterAttacks(), wizard);
         mangemortModel.getHealth();
@@ -30,7 +32,7 @@ public class Level6 {static List<SpellModel> knownSpells = SpellModel.getAvailab
 
         while (wizard.getHealth() > 0 && mangemortModel.getHealth() > 0) {
             Display.displayWizardInfo(wizard.getName(), wizard.getHealth(), wizard.getMana(), wizard.getExperience());
-            Display.displayEnemyInfo(enemy);
+            display.displayEnemyInfo(enemy);
             Scanner scanner = new Scanner(System.in);
             // Le wizard choisit son action
             System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la pièce.");
@@ -111,5 +113,7 @@ public class Level6 {static List<SpellModel> knownSpells = SpellModel.getAvailab
                 }
             }
         }
+        Level7.level7(wizard,enemy);
+
     }
 }

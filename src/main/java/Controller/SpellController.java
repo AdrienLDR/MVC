@@ -2,7 +2,9 @@ package Controller;
 
 import java.util.List;
 
+import Model.Enemy.BasiliskModel;
 import Model.Enemy.PeterPettigrewModel;
+import Model.Enemy.TrollModel;
 import Model.Enemy.VoldemortModel;
 import Model.EnemyModel;
 import Model.SpellModel;
@@ -13,17 +15,18 @@ public class SpellController {
     private WizardModel wizard;
     private List<SpellModel> knownSpells;
     private SpellView view;
+    private boolean hasTooth;
 
     public SpellController(WizardModel wizard, List<SpellModel> knownSpells, SpellView view) {
         this.wizard = wizard;
         this.knownSpells = knownSpells;
         this.view = view;
+        this.hasTooth = false;
     }
 
     public void displaySpells() {
         SpellView.displayKnownSpells(knownSpells);
     }
-
 
     public void castSpell(String spellName, EnemyModel enemy) {
         SpellModel spell = getSpell(spellName);
@@ -36,14 +39,14 @@ public class SpellController {
             view.displayInsufficientMana();
             return;
         }
+
         int damage = spell.getDamage();
         wizard.setMana(wizard.getMana() - spell.getManaCost());
         enemy.takeDamage(damage);
         view.displayCastSpell(spell.getName(), damage);
         checkLumosSpell(spell);
-        checkAccioSpell(spell,enemy);
+        checkAccioSpell(spell, enemy);
     }
-
 
     public void askSpellAndCast(EnemyModel enemy) {
         SpellView.displayKnownSpells(knownSpells);
@@ -54,7 +57,6 @@ public class SpellController {
         }
         castSpell(spellName, enemy); // Pass the enemy object to the castSpell method
     }
-
 
     public SpellModel getSpell(String spellName) {
         for (SpellModel spell : knownSpells) {
@@ -67,14 +69,18 @@ public class SpellController {
 
     private void checkLumosSpell(SpellModel spell) {
         if (spell != null && spell.getName().equalsIgnoreCase("Lumos")) {
-            Model.Enemy.TrollModel.setVisibility(2);
-            System.out.println("Vous pouvez voir distinctement le troll.");
+            TrollModel.setVisibility(2);
+            System.out.println("Vous pouvez voir distinctement le basilic.");
         }
     }
 
     private void checkAccioSpell(SpellModel spell, EnemyModel enemy) {
         if (spell != null && spell.getName().equalsIgnoreCase("Accio")) {
             System.out.println("Vous avez utilisé le sort Accio !");
+            if (enemy instanceof BasiliskModel && !hasTooth) {
+                System.out.println("Vous avez utilisé le sortilège Accio pour récupérer le croc du basilic !");
+                hasTooth = true;
+            }
             // Vérifier si l'ennemi est Peter Pettigrew ou Voldemort
             if (enemy instanceof PeterPettigrewModel) {
                 System.out.println("Vous avez attiré le Portolion à vous, mais Peter Pettigrew essaie de vous en empêcher !");
@@ -85,5 +91,4 @@ public class SpellController {
             }
         }
     }
-
 }

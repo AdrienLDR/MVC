@@ -2,6 +2,7 @@ package Niveau;
 
 import Controller.*;
 import Model.*;
+import Model.Enemy.BasiliskModel;
 import Model.Enemy.TrollModel;
 import View.*;
 
@@ -47,6 +48,9 @@ public class Level0 {
         // display wizard info
         wizardController.updateView();
         RewardController.giveRewardToWizard(wizardController.getWizardModel());
+
+        Level2.level2(wizardModel,new BasiliskModel("Basilisk", 200, AttackModel.getBasiliskAttacks(), wizardModel));
+
         Level1.level1(wizardModel, new TrollModel("Troll", 120, AttackModel.getTrollAttacks(), wizardModel));
 
     }

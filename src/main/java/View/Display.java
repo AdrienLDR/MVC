@@ -58,7 +58,7 @@ public class Display {
         System.out.println(YELLOW + "-----------------------------------------------" + RESET);
     }
 
-    public static void displayEnemyInfo(EnemyModel enemy) {
+    public void displayEnemyInfo(EnemyModel enemy) {
         System.out.println(YELLOW + "-----------------------------------------------");
         System.out.print(PURPLE + "Enemy: " + enemy.getName() + "\t");
         System.out.print(RED + "Health: " + RED + enemy.getHealth() + "\t");

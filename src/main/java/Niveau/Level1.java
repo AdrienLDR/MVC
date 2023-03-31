@@ -2,6 +2,7 @@ package Niveau;
 
 import Controller.*;
 import Model.*;
+import Model.Enemy.BasiliskModel;
 import Model.Enemy.TrollModel;
 import View.*;
 
@@ -13,6 +14,8 @@ public class Level1 {
     static String attack = AttackModel.getTrollAttacks().toString();
 
     public static void level1(WizardModel wizard, EnemyModel enemy) {
+        Display display = new Display();
+
         wizard.getHealth();
         TrollModel trollModel = new TrollModel("Troll", 120, AttackModel.getTrollAttacks(),wizard);
         trollModel.getHealth();
@@ -26,7 +29,7 @@ public class Level1 {
 
         while (wizard.getHealth() > 0 && trollModel.getHealth() > 0) {
             Display.displayWizardInfo(wizard.getName(), wizard.getHealth(), wizard.getMana(), wizard.getExperience());
-            Display.displayEnemyInfo(enemy);
+            display.displayEnemyInfo(enemy);
             Scanner scanner = new Scanner(System.in);
             // Le wizard choisit son action
             System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la pièce.");
@@ -82,5 +85,6 @@ public class Level1 {
 
         }
         RewardController.giveRewardToWizard(wizard);
+        Level2.level2(wizard,new BasiliskModel("Basilisk", 200, AttackModel.getBasiliskAttacks(), wizard));
     }
 }

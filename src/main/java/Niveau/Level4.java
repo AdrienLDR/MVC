@@ -14,12 +14,14 @@ public class Level4 {
     static String attack = AttackModel.getVoldemortAttacks().toString();
 
     public static void level4(WizardModel wizard, EnemyModel enemy) {
+
+        Display display = new Display();
+
         VoldemortModel voldemortModel = new VoldemortModel("Voldemort", 400, AttackModel.getVoldemortAttacks(), wizard,"en Plume de Phoenix");
         PeterPettigrewModel peterPettigrewModel = new PeterPettigrewModel("Peter Pettigrew", 120, AttackModel.getPettigrewAttacks(), wizard);
         voldemortModel.getHealth();
         peterPettigrewModel.getHealth();
 
-        knownSpells.add(new SpellModel("Accio", "Sortilège d'Attraction", 30, 20));
         System.out.println("Vous êtes maintenant dans un cimetière sombre et sinistre, entouré de tombes lugubres. Vous remarquez la présence de Voldemort et de Peter Pettigrew.");
 
         System.out.println("Voldemort s'approche de vous en souriant, tandis que Peter Pettigrew est en train de préparer le Portolion pour leur fuite. Vous réalisez que votre seule chance de survie est d'attirer le Portolion à vous en utilisant le sort 'Accio'.");
@@ -28,7 +30,7 @@ public class Level4 {
 
         while (wizard.getHealth() > 0 && voldemortModel.getHealth() > 0 && peterPettigrewModel.getHealth() > 0) {
             Display.displayWizardInfo(wizard.getName(), wizard.getHealth(), wizard.getMana(), wizard.getExperience());
-            Display.displayEnemyInfo(enemy);
+            display.displayEnemyInfo(enemy);
             Scanner scanner = new Scanner(System.in);
             // Le wizard choisit son action
             System.out.println("Que voulez-vous faire ? \n1 attaquer Voldemort\n2 attaquer Peter Pettigrew\n3 se cacher");
@@ -54,6 +56,8 @@ public class Level4 {
                 System.out.println("Félicitations ! Vous avez réussi à attirer le Portolion à vous et à vaincre Voldemort et Peter Pettigrew !");
             }
         }
+        Level5.level5(wizard,enemy);
+
     }
 }
 

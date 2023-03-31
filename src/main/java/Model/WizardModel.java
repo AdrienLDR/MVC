@@ -9,8 +9,6 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Model.WandModel.core;
-
 @Setter
 @Getter
 public class WizardModel extends CharacterModel {

@@ -13,6 +13,8 @@ public class Level7 {
     static String attack = AttackModel.getVoldemortAttacks().toString();
 
     public static void level7(WizardModel wizard, EnemyModel enemy) {
+        Display display = new Display();
+
         wizard.getHealth();
         VoldemortModel voldemortModel = new VoldemortModel("Voldemort", 300, AttackModel.getVoldemortAttacks(), wizard,"en Plume de Phoenix");
         BellatrixLestrangeModel bellatrixModel = new BellatrixLestrangeModel("Bellatrix Lestrange", 200, AttackModel.getBellatrixAttacks(), wizard);
@@ -27,8 +29,8 @@ public class Level7 {
 
         while (wizard.getHealth() > 0 && (voldemortModel.getHealth() > 0 || bellatrixModel.getHealth() > 0)) {
             Display.displayWizardInfo(wizard.getName(), wizard.getHealth(), wizard.getMana(), wizard.getExperience());
-            Display.displayEnemyInfo(voldemortModel);
-            Display.displayEnemyInfo(bellatrixModel);
+            display.displayEnemyInfo(voldemortModel);
+            display.displayEnemyInfo(bellatrixModel);
             Scanner scanner = new Scanner(System.in);
             // Le wizard choisit son action
             System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la pièce.");

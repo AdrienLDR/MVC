@@ -2,7 +2,7 @@ package View;
 
 import java.util.Scanner;
 
-import static Model.SpellModel.getKnownSpells;
+import Model.SpellModel;
 
 public class WizardView {
     private static final Scanner scanner = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class WizardView {
         Display.displayHouseInfo(houseName);
         Display.displayPetInfo(petName, petSpecies);
         Display.displayWandInfo(wandWood, wandCore, wandLength);
-        SpellView.displayKnownSpells(getKnownSpells());
+        SpellView.displayKnownSpells(SpellModel.getKnownSpells());
 
     }
 
