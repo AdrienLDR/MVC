@@ -1,5 +1,6 @@
 package Niveau;
 
+import Controller.HouseController;
 import Model.*;
 import View.Display;
 import Controller.PotionController;
@@ -24,11 +25,14 @@ public class Level2 {
         BasiliskModel basiliskModel = new BasiliskModel("Basilisk", 200, AttackModel.getBasiliskAttacks(), wizard);
         basiliskModel.getHealth();
 
+
         knownSpells.add(new SpellModel("Accio", "Sortilège d'Attraction", 30, 20));
 
-        boolean hasSword = WizardModel.House.GRYFFINDOR.equals(wizard.getHouse());
-        boolean hasTooth = false;
+        boolean hasSword = HouseController.getHasSword();
 
+        boolean hasTooth = SpellController.getHasTooth();
+
+        int epee=0;
         System.out.println("Vous êtes maintenant dans la Chambre des Secrets. Vous êtes face au terrible basilic !");
 
         SpellController spellController = new SpellController(wizard, knownSpells, new SpellView());
@@ -48,16 +52,16 @@ public class Level2 {
             int choix = scanner.nextInt();
 
             if (choix == 1) {
-                spellController.askSpellAndCast(basiliskModel);
-
-                if (hasSword) {
+                if (HouseController.getHasSword() && epee >= 1) {
                     System.out.println("Vous utilisez l'épée légendaire de Godric Gryffindor pour terrasser le basilic !");
                     basiliskModel.takeDamage(150);
-                } else if (hasTooth) {
+                } else if (SpellController.getHasTooth()) {
                     System.out.println("Vous utilisez le croc du basilic pour détruire le journal de Tom Jedusor !");
-                    wizard.getInventory().remove("Croc du basilic");
                     basiliskModel.takeDamage(100);
                 }
+                spellController.askSpellAndCast(basiliskModel);
+
+
             } else if (choix == 2) {
                 PotionController potionController = new PotionController();
                 potionController.useHidePotion(wizard);
@@ -73,35 +77,38 @@ public class Level2 {
                 System.out.println("2) Les crocs du basilic");
 
                 int objet = scanner.nextInt();
-                if (objet == 1 && !hasSword) {
+                if (objet == 1 && HouseController.getHasSword()) {
                     System.out.println("Vous êtes equipé de l'épée légendaire de Godric Gryffindor !");
-                    hasSword = true;
-                } else if (objet == 2 && !hasTooth) {
+                    epee ++;
+                    continue;
+                }else if (objet == 2 && !SpellController.getHasTooth()) {
                     System.out.println("Vous n'avez pas de crocs de Basilic, essayer de lui en arracher un !");
-                    hasTooth = true;
+                    continue;
                 } else if (objet == 2) {
                     System.out.println("Vous avez déjà récupéré un croc du basilic! Il ne reste plus qu'a detruire le journal.");
+                    continue;
                 } else {
                     System.out.println("Objet invalide.");
                     continue;
                 }
             }
-            enemy.attack(attack, enemy);
+            if (enemy.getHealth() > 0) {
+                basiliskModel.attack(attack, basiliskModel);}
             if (wizard.getHealth() <= 0) {
                 System.out.println("Vous êtes mort...");
-            } else if (basiliskModel.getHealth() <= 0) {
-                if (hasTooth) {
-                    System.out.println("Vous avez vaincu le basilic en utilisant le croc du basilic !");
-                    RewardController.giveRewardToWizard(wizard);
-                } else if (hasSword) {
-                    System.out.println("Vous avez vaincu le basilic en utilisant l'épée légendaire de Godric Gryffindor !");
-                    RewardController.giveRewardToWizard(wizard);
-                } else {
-                    System.out.println("Vous avez vaincu le basilic !");
-                    RewardController.giveRewardToWizard(wizard);
-                }
+            }   else if (basiliskModel.getHealth() <= 0) {
+            if (hasTooth) {
+                System.out.println("Vous avez vaincu le basilic en utilisant le croc du basilic !");
+                RewardController.giveRewardToWizard(wizard);
+            } else if (hasSword) {
+                System.out.println("Vous avez vaincu le basilic en utilisant l'épée légendaire de Godric Gryffindor !");
+                RewardController.giveRewardToWizard(wizard);
+            } else {
+                System.out.println("Vous avez vaincu le basilic !");
+                RewardController.giveRewardToWizard(wizard);
             }
+
             Level3.level3(wizard, new EnemyModel("Dementor", 150, AttackModel.getDementorAttacks(), wizard));
         }
     }
-}
+}}

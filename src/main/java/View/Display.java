@@ -61,7 +61,7 @@ public class Display {
     public void displayEnemyInfo(EnemyModel enemy) {
         System.out.println(YELLOW + "-----------------------------------------------");
         System.out.print(PURPLE + "Enemy: " + enemy.getName() + "\t");
-        System.out.print(RED + "Health: " + RED + enemy.getHealth() + "\t");
+        System.out.print(RED + "Health: " + RED + enemy.getHealth() + "\n");
 
         if (enemy instanceof TrollModel) {
             System.out.println(GREEN + "Visibility: " + ((TrollModel) enemy).getVisibility() + "\t");

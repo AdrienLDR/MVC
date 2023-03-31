@@ -7,6 +7,7 @@ import View.HouseView;
 public class HouseController {
     private final HouseModel model;
     private final HouseView view;
+    private static boolean hasSword = false;
 
     public HouseController(HouseModel model, HouseView view) {
         this.model = model;
@@ -27,6 +28,7 @@ public class HouseController {
         switch (choice) {
             case 1:
                 house = WizardModel.House.GRYFFINDOR;
+                hasSword= true;
                 break;
             case 2:
                 house = WizardModel.House.HUFFLEPUFF;
@@ -42,5 +44,13 @@ public class HouseController {
         view.displayHouse(model.getHouseName());
         return house;
     }
-}
 
+
+    public static boolean getHasSword() {
+        return hasSword;
+    }
+
+    public static void setHasSword(boolean hasTooth) {
+        HouseController.hasSword = hasTooth;
+    }
+}

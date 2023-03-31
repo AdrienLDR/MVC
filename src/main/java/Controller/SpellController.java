@@ -15,13 +15,16 @@ public class SpellController {
     private WizardModel wizard;
     private List<SpellModel> knownSpells;
     private SpellView view;
-    private boolean hasTooth;
+    private static boolean hasTooth;
 
     public SpellController(WizardModel wizard, List<SpellModel> knownSpells, SpellView view) {
         this.wizard = wizard;
         this.knownSpells = knownSpells;
         this.view = view;
         this.hasTooth = false;
+    }
+
+    public static boolean getHasTooth() {return hasTooth;
     }
 
     public void displaySpells() {
@@ -53,6 +56,7 @@ public class SpellController {
         String spellName = view.askSpell(knownSpells);
         if (spellName == null) {
             view.displayInvalidSpell();
+
             return;
         }
         castSpell(spellName, enemy); // Pass the enemy object to the castSpell method
