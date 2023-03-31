@@ -50,10 +50,6 @@ public class Level0 {
 
         Level5.level5(wizardModel,new DoloresOmbrageModel("Dolores Ombrage", 1000, AttackModel.getOmbrageAttacks(), wizardModel));
 
-
-
         Level1.level1(wizardModel,new TrollModel("Troll", 120, AttackModel.getTrollAttacks(), wizardModel));
-
-
     }
 }

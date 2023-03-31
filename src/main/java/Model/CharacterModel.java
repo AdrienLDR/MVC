@@ -35,8 +35,9 @@ public abstract class CharacterModel {
     public abstract void attack(String spellName);
 
     public abstract void heal();
-    public void setHealth(int health) {
+    public int setHealth(int health) {
         this.health = health;
+        return health;
     }
 
     public void restoreHealth(int healAmount) {
