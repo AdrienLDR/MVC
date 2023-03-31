@@ -9,20 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="niveaux sans erreur mais ils s'enchaine pas encoree et logique des niveaux pas faitees">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/BasiliskModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/WandModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WandModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/WizardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/WizardView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680221745168</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="niveaux sans erreur mais ils s'enchaine pas encoree et logique des niveaux pas faitees">
+      <created>1680230019983</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680230019983</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

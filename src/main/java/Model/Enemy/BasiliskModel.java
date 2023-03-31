@@ -8,7 +8,6 @@ import java.util.List;
 
 public class BasiliskModel extends EnemyModel {
 
-    private static int health;
     private static int visibility;
 
     public BasiliskModel(String name, int health, List<AttackModel> basiliskAttack, WizardModel wizard) {
@@ -18,12 +17,5 @@ public class BasiliskModel extends EnemyModel {
 
     public int getVisibility() {
         return visibility;
-    }
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        BasiliskModel.health = health;
     }
 }

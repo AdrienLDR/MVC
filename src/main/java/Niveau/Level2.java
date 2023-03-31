@@ -22,6 +22,7 @@ public class Level2 {
 
         wizard.getHealth();
         BasiliskModel basiliskModel = new BasiliskModel("Basilisk", 200, AttackModel.getBasiliskAttacks(), wizard);
+        basiliskModel.getHealth();
 
         knownSpells.add(new SpellModel("Accio", "Sortilège d'Attraction", 30, 20));
 
