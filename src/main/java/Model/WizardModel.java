@@ -8,12 +8,13 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static Model.WandModel.core;
+
 @Setter
 @Getter
 public class WizardModel extends CharacterModel {
 
-    public void setInvisible(boolean b) {
-    }
 
     public enum House {
         GRYFFINDOR,
@@ -24,6 +25,8 @@ public class WizardModel extends CharacterModel {
 
     private House house;
     private String wand;
+    private String core;
+
     private String pet;
     private int mana;
     private int level;
@@ -45,6 +48,14 @@ public class WizardModel extends CharacterModel {
         this.availableSpells = new ArrayList<SpellModel>();
         this.inventory = new ArrayList<String>();
     }
+
+    public void setInvisible(boolean b) {
+    }
+
+    public String getCore() {
+        return core;
+    }
+
 
     public void learnSpell(SpellModel spell) {
         for (SpellModel availableSpell : availableSpells) {

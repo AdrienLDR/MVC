@@ -7,7 +7,14 @@ import Model.WizardModel;
 import java.util.List;
 
 public class VoldemortModel extends EnemyModel {
-    public VoldemortModel(String name, int health, List<AttackModel> voldemortAttacks, WizardModel wizard) {
-        super("Voldemort", 200, AttackModel.getVoldemortAttacks(),wizard);
+    private String Core;
+
+    public VoldemortModel(String name, int health, List<AttackModel> voldemortAttacks, WizardModel wizard, String Core) {
+        super("Voldemort", 200, AttackModel.getVoldemortAttacks(), wizard);
+        this.Core = Core;
+    }
+
+    public String getCore() {
+        return Core;
     }
 }

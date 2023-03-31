@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class WandModel {
     private static String wood;
-    private static String core;
+    static String core;
     private static int length;
 
     public WandModel() {}

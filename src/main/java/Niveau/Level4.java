@@ -14,7 +14,7 @@ public class Level4 {
     static String attack = AttackModel.getVoldemortAttacks().toString();
 
     public static void level4(WizardModel wizard, EnemyModel enemy) {
-        VoldemortModel voldemortModel = new VoldemortModel("Voldemort", 400, AttackModel.getVoldemortAttacks(), wizard);
+        VoldemortModel voldemortModel = new VoldemortModel("Voldemort", 400, AttackModel.getVoldemortAttacks(), wizard,"en Plume de Phoenix");
         PeterPettigrewModel peterPettigrewModel = new PeterPettigrewModel("Peter Pettigrew", 120, AttackModel.getPettigrewAttacks(), wizard);
         voldemortModel.getHealth();
         peterPettigrewModel.getHealth();

@@ -12,12 +12,17 @@ public class Level6 {static List<SpellModel> knownSpells = SpellModel.getAvailab
     static String attack = AttackModel.getDeathEaterAttacks().toString();
 
     public static void level6(WizardModel wizard, EnemyModel enemy) {
+
         wizard.getHealth();
         MangemortModel mangemortModel = new MangemortModel("Mangemort", 150, AttackModel.getDeathEaterAttacks(), wizard);
         mangemortModel.getHealth();
         mangemortModel.getVisibility();
         int tourAstronomie = 0;
         SpellModel sectumsempra;
+
+        knownSpells.add(new SpellModel("Sectumsempra", "Sortilège de mutilation", 80, 70));
+
+
         System.out.println("Les Mangemorts attaquent Poudlard ! Vous êtes à la Tour d’astronomie. Vous apercevez les Mangemorts au loin qui s'approchent dangereusement. ");
 
         System.out.println("Vous devez les attaquer de front avec Sectumsempra ! Si vous êtes de Serpentard, vous pouvez choisir de vous allier avec eux.");
@@ -31,18 +36,17 @@ public class Level6 {static List<SpellModel> knownSpells = SpellModel.getAvailab
             System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la pièce.");
             int choix = scanner.nextInt();
             if (choix == 1) {
-                sectumsempra = spellController.getSpell("Sectumsempra");
-                if (wizard.getHouse() == House.Serpentard) {
+                if (wizard.getHouse() == WizardModel.House.SLYTHERIN) {
                     System.out.println("Vous utilisez Sectumsempra contre vos ennemis de Poudlard ?");
                     System.out.println("1 Oui\n2 Non");
                     int reponse = scanner.nextInt();
                     if (reponse == 1) {
-                        sectumsempra.cast(mangemortModel);
+                        spellController.castSpell("Sectumsempra", enemy);
                     } else {
                         System.out.println("Vous décidez de ne pas attaquer.");
                     }
                 } else {
-                    sectumsempra.cast(mangemortModel);
+                    spellController.castSpell("Sectumsempra", enemy);
                 }
             } else if (choix == 2) {
                 PotionController potionController = new PotionController();
@@ -70,16 +74,15 @@ public class Level6 {static List<SpellModel> knownSpells = SpellModel.getAvailab
                         System.out.println("Choix invalide, veuillez choisir une action valide.");
                     }        // Mangemort attaque
                     if (mangemortModel.getVisibility() > 0 && tourAstronomie % 3 == 0) {
-                        AttackModel mangemortAttack = mangemortModel.chooseAttack();
-                        mangemortAttack.attack(wizard);
+                        enemy.attack(attack, enemy);
+
                     }
 
                     // Le wizard a survécu à l'attaque
                     if (wizard.getHealth() > 0) {
                         // Gagne de l'expérience
-                        int experienceGained = enemy.getExperience();
-                        wizard.addExperience(experienceGained);
-                        System.out.println("Vous avez gagné " + experienceGained + " points d'expérience !");
+                        RewardController.giveRewardToWizard(wizard);
+
 
                         // Le joueur doit choisir s'il veut se reposer pour récupérer de la santé ou continuer à avancer
                         System.out.println("Que voulez-vous faire ? \n1 Se reposer\n2 Continuer");

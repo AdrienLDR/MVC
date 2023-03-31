@@ -71,7 +71,9 @@ public class Level1 {
                 System.out.println("Choix invalide.");
                 return;
             }
-            enemy.attack(attack, enemy);
+            if (enemy.getHealth() > 0) {
+
+                enemy.attack(attack, enemy);}
             if (wizard.getHealth() <= 0) {
                 System.out.println("Vous êtes mort...");
             } else if (trollModel.getHealth() <= 0) {

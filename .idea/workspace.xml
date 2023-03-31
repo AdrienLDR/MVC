@@ -7,23 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="niveaux avec plein d'erreurs">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/InventaireController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/RewardController.java" afterDir="false" />
+    <list default="true" id="05af10d8-8e6d-4ea3-be0a-ff729fcd7caf" name="Changes" comment="niveaux avec erreurs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PotionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SpellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WizardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CharacterModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/DementorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DementorModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/DoloresOmbrageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/DoloresOmbrageModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/MangemortModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/MangemortModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Enemy/VoldemortModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy/VoldemortModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/WandModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WandModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WizardModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Niveau/Level7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Niveau/Level7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/WandView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/WandView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680204416624</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="niveaux avec erreurs">
+      <created>1680216468657</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680216468657</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -226,7 +227,8 @@
     <MESSAGE value="&#10;dry" />
     <MESSAGE value="toujours des problemes avec les reward dans les niveaux" />
     <MESSAGE value="niveaux avec plein d'erreurs" />
-    <option name="LAST_COMMIT_MESSAGE" value="niveaux avec plein d'erreurs" />
+    <MESSAGE value="niveaux avec erreurs" />
+    <option name="LAST_COMMIT_MESSAGE" value="niveaux avec erreurs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
