@@ -18,4 +18,8 @@ public class DementorModel extends EnemyModel {
     public int getVisibility() {
         return visibility;
     }
+    public static void setVisibility(int visibility) {
+        DementorModel.visibility = visibility;
+    }
+
 }

@@ -10,7 +10,7 @@ public class MangemortModel extends EnemyModel {
     private int visibility;
 
     public MangemortModel(String name, int health, List<AttackModel> mangemortAttacks, WizardModel wizard) {
-        super("Mangemort", 110, AttackModel.getDeathEaterAttacks(),wizard);
+        super("Mangemort", health, AttackModel.getDeathEaterAttacks(),wizard);
     }
 
     public int getVisibility() {

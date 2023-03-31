@@ -2,9 +2,7 @@ package Niveau;
 
 import Controller.*;
 import Model.*;
-import Model.Enemy.BasiliskModel;
-import Model.Enemy.DementorModel;
-import Model.Enemy.TrollModel;
+import Model.Enemy.*;
 import View.*;
 
 import java.util.List;
@@ -50,7 +48,8 @@ public class Level0 {
         wizardController.updateView();
         RewardController.giveRewardToWizard(wizardController.getWizardModel());
 
-        Level3.level3(wizardModel,new DementorModel("Dementor", 150, AttackModel.getDementorAttacks(),wizardModel));
+        Level5.level5(wizardModel,new DoloresOmbrageModel("Dolores Ombrage", 1000, AttackModel.getOmbrageAttacks(), wizardModel));
+
 
 
         Level1.level1(wizardModel,new TrollModel("Troll", 120, AttackModel.getTrollAttacks(), wizardModel));

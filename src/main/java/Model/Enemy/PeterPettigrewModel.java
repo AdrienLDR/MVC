@@ -8,6 +8,6 @@ import java.util.List;
 
 public class PeterPettigrewModel extends EnemyModel {
     public PeterPettigrewModel(String name, int health, List<AttackModel> peterPettigrewAttacks, WizardModel wizard) {
-        super("Peter Pettigrew", 60, AttackModel.getPettigrewAttacks(),wizard);
+        super("Peter Pettigrew", health, AttackModel.getPettigrewAttacks(),wizard);
     }
 }

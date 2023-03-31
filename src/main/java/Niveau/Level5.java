@@ -17,13 +17,14 @@ public class Level5 {
         Display display = new Display();
 
         wizard.getHealth();
-        DoloresOmbrageModel ombrageModel = new DoloresOmbrageModel("Dolores Ombrage", 250, AttackModel.getOmbrageAttacks(), wizard);
+        DoloresOmbrageModel ombrageModel = new DoloresOmbrageModel("Dolores Ombrage", 1000, AttackModel.getOmbrageAttacks(), wizard);
         ombrageModel.getHealth();
         ombrageModel.getVisibility();
         SpellModel Incendio;
+        int aprentissageIncendio = 0;
 
         int feuxDartifice = 0;
-        knownSpells.add(new SpellModel("Incendio", "Sortilège de Feu", 40, 30));
+
         System.out.println("Vous êtes dans la salle d'examen de Poudlard, prêt à passer votre BUSE (Brevet Universel de Sorcellerie Élémentaire) ! Cependant, Dolores Ombrage veille sur le grain et sera un obstacle sur votre chemin. Votre objectif est de la distraire le temps que les feux d'artifice soient prêts à être utilisés.");
 
         System.out.println("Vous vous préparez à affronter Dolores Ombrage avec votre baguette magique en main.");
@@ -34,10 +35,10 @@ public class Level5 {
             display.displayEnemyInfo(enemy);
             Scanner scanner = new Scanner(System.in);
             // Le wizard choisit son action
-            System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 se cacher\n3 Observer la pièce.");
+            System.out.println("Que voulez-vous faire ? \n1 attaquer\n2 Utiliser une potion \n3 Observer la pièce.");
             int choix = scanner.nextInt();
             if (choix == 1) {
-                spellController.askSpellAndCast(ombrageModel);
+                spellController.askSpellAndCast(enemy);
             } else if (choix == 2) {
                 PotionController potionController = new PotionController();
                 potionController.useHidePotion(wizard);
@@ -59,15 +60,21 @@ public class Level5 {
                         feuxDartifice++;
                         if (feuxDartifice == 3) {
                             System.out.println("Vous avez maintenant suffisamment de feux d'artifice pour mettre en place votre distraction !");
-                         spellController.getSpell("Incendio");
+                            System.out.println("Il faut juste pouvoir les allumer !");
+
                             Incendio = spellController.getSpell("Incendio");
-                            Incendio.setDamage(200);                        }
+                            Incendio.setDamage(2000);                        }
                     } else if (objet == 2) {
                         itemController = new ItemController();
                         itemController.useBookItem(wizard, ombrageModel, ombrageModel.getVisibility());
                     } else if (objet == 3) {
-                        itemController = new ItemController();
-                        itemController.useParchmentItem(wizard, ombrageModel);
+                        System.out.println("Sur le parchemin se trouve une methode d'incantation pour le sort INCENDIO!!");
+                        System.out.println("Il peut servir a allumer des feux d'artifice par exemple.");
+
+
+                        knownSpells.add(new SpellModel("Incendio", "Sortilège de Feu", 40, 30));
+                        aprentissageIncendio ++;
+;
                     }
                 }
             }        // Ombrage choisit son action
@@ -75,9 +82,9 @@ public class Level5 {
 
                 enemy.attack(attack, enemy);
 
-
                 // Si les feux d'artifice sont prêts, le joueur peut les utiliser pour distraire Ombrage
-                if (feuxDartifice == 3) {
+
+                if (feuxDartifice == 3 && aprentissageIncendio >= 1) {
                     System.out.println("Les feux d'artifice sont prêts ! Voulez-vous les utiliser pour distraire Dolores Ombrage ? (1/2)");
                     String distractionChoice = scanner.next();
                     if (distractionChoice.equals("1")) {
@@ -87,15 +94,13 @@ public class Level5 {
                     }
                 }
 
-
-                if (wizard.getHealth() > 0) {
-                    System.out.println("Félicitations, vous avez réussi à distraire Dolores Ombrage et à passer votre BUSE !");
-                } else {
-                    System.out.println("Vous avez échoué à passer votre BUSE, vous allez devoir retenter votre chance...");
-
-                }
-
             }
+        }
+
+        if (wizard.getHealth() > 0) {
+            System.out.println("Félicitations, vous avez réussi à distraire Dolores Ombrage et à passer votre BUSE !");
+        } else {
+            System.out.println("Vous avez échoué à passer votre BUSE, vous allez devoir retenter votre chance...");
         }
         Level6.level6(wizard,enemy);
 

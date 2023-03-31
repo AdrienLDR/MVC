@@ -10,7 +10,7 @@ public class VoldemortModel extends EnemyModel {
     private String Core;
 
     public VoldemortModel(String name, int health, List<AttackModel> voldemortAttacks, WizardModel wizard, String Core) {
-        super("Voldemort", 200, AttackModel.getVoldemortAttacks(), wizard);
+        super("Voldemort", health, AttackModel.getVoldemortAttacks(), wizard);
         this.Core = Core;
     }
 

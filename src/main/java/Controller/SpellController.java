@@ -2,10 +2,7 @@ package Controller;
 
 import java.util.List;
 
-import Model.Enemy.BasiliskModel;
-import Model.Enemy.PeterPettigrewModel;
-import Model.Enemy.TrollModel;
-import Model.Enemy.VoldemortModel;
+import Model.Enemy.*;
 import Model.EnemyModel;
 import Model.SpellModel;
 import Model.WizardModel;
@@ -74,7 +71,10 @@ public class SpellController {
     private void checkLumosSpell(SpellModel spell) {
         if (spell != null && spell.getName().equalsIgnoreCase("Lumos")) {
             TrollModel.setVisibility(2);
-            System.out.println("Vous pouvez voir distinctement le basilic.");
+            DementorModel.setVisibility(2);
+            DoloresOmbrageModel.setVisibility(2);
+
+            System.out.println("Vous pouvez voir distinctement tout votre environnement");
         }
     }
 
