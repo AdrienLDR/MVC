@@ -43,7 +43,7 @@ public class WandView {
     }
 
     public static void displayWandInfo(String name, WandModel wand) {
-        System.out.println("Félicitations " + name + ", tu as choisi une baguette en " + WandModel.getWood() + ", mesure " + WandModel.getLength() + "cm et a un cœur " + WandModel.getCore() + ".");
+        System.out.println("Félicitations, tu as choisi une baguette en " + WandModel.getWood() + ", mesure " + WandModel.getLength() + "cm et a un cœur " + WandModel.getCore() + ".");
     }
 
 }

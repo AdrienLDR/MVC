@@ -8,9 +8,8 @@ public class Main {
     public static void main(String[] args) {
         WizardModel wizard = new WizardModel(null, 500, 1, null, null, 200, 1, null, null, null);
 
-        Level0 level0 = new Level0();
 
-        level0.level0(wizard);
+        Level0.level0(wizard);
 
         TrollModel troll = new TrollModel("Troll", 120, AttackModel.getTrollAttacks(), wizard);
         Level1 level1 = new Level1();

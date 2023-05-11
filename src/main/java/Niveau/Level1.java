@@ -14,12 +14,10 @@ public class Level1 {
     List<SpellModel> knownSpells = spellModel.getKnownSpells();    static String attack = AttackModel.getTrollAttacks().toString();
 
     public void level1(WizardModel wizard, EnemyModel enemy) {
-        Display display = new Display();
+
         wizard.getName();
-        wizard.getHealth();
+        Display display = new Display();
         TrollModel trollModel = new TrollModel("Troll", 120, AttackModel.getTrollAttacks(),wizard);
-        trollModel.getHealth();
-        trollModel.getVisibility();
         int lavabo = 0;
         SpellModel wingardiumLeviosa;
         System.out.println("Vous êtes maintenant dans les toilettes du château. Vous entendez un bruit bizarre venant de l'une des cabines. En vous approchant, vous remarquez qu'un énorme troll est en train de détruire tout sur son passage.");
@@ -40,7 +38,6 @@ public class Level1 {
                 PotionController potionController = new PotionController();
                 potionController.useHidePotion(wizard);
                 // Corriger les dégâts infligés au wizard
-                wizard.getHealth();
             } else if (choix == 3) {
                 // Observation de la piece
                 if (trollModel.getVisibility() < 1) {

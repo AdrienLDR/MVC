@@ -13,14 +13,6 @@ public class EnemyModel extends CharacterModel {
         this.wizard = wizard;
     }
 
-    public List<AttackModel> getAttacks() {
-        return attacks;
-    }
-
-    public void setAttacks(List<AttackModel> attacks) {
-        this.attacks = attacks;
-    }
-
     public void takeDamage(int damage) {
         this.setHealth(this.getHealth() - damage);
         System.out.println(this.getName() + " perd " + damage + " points de vie !");

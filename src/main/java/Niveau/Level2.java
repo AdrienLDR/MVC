@@ -2,13 +2,13 @@ package Niveau;
 
 import Controller.HouseController;
 import Model.*;
-import Model.Enemy.DementorModel;
 import View.Display;
 import Controller.PotionController;
 import Controller.RewardController;
 import Controller.SpellController;
 import Model.Enemy.BasiliskModel;
 import View.SpellView;
+import View.WizardView;
 
 import java.util.List;
 import java.util.Scanner;

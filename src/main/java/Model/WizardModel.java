@@ -5,12 +5,13 @@ import View.SpellView;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Setter
 @Getter
 public class WizardModel extends CharacterModel {
+
+    static String name;
 
     public enum House {
         GRYFFINDOR,
@@ -35,7 +36,6 @@ public class WizardModel extends CharacterModel {
 
     public WizardModel(String name, int health, int level, String wand, String pet, int mana, int experience, List<SpellModel> knownSpells, List<SpellModel> availableSpells, List<String> inventory) {
         super(name, health);
-        this.setName(name);
         this.level = level;
         this.wand = wand;
         this.pet = pet;
@@ -45,6 +45,7 @@ public class WizardModel extends CharacterModel {
         this.availableSpells = availableSpells;
         this.inventory = inventory;
     }
+
 
     public String getWandWood() {
         return WandModel.getWood();

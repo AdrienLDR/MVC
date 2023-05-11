@@ -1,27 +1,23 @@
 package Model;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 public abstract class CharacterModel {
-    @Getter @Setter
     private String name;
-    @Getter
     private int health;
 
-    public CharacterModel(String name, int health ) {
+    public CharacterModel(String name, int health) {
         this.name = name;
         this.health = health;
     }
 
     public void takeDamage(int damage) {
-        if(this instanceof WizardModel){
+        if (this instanceof WizardModel) {
             WizardModel wizard = (WizardModel) this;
             wizard.setHealth(wizard.getHealth() - damage);
             System.out.println(wizard.getName() + " perd " + damage + " points de vie !");
-        } else if(this instanceof EnemyModel){
+        } else if (this instanceof EnemyModel) {
             this.health -= damage;
             if (this.health < 0) {
                 this.health = 0;
@@ -35,15 +31,21 @@ public abstract class CharacterModel {
     public abstract void attack(String spellName);
 
     public abstract void heal();
-    public int setHealth(int health) {
+
+    public void setHealth(int health) {
         this.health = health;
-        return health;
+    }
+
+    public static void setName(String name) {
+        WizardModel.name = name;
+    }
+    public String getName() {
+        return name;
     }
 
     public void restoreHealth(int healAmount) {
         int currentHealth = getHealth();
         int newHealth = currentHealth + healAmount;
         setHealth(newHealth);
-
     }
 }

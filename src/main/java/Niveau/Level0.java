@@ -7,7 +7,7 @@ import View.*;
 import java.util.List;
 
 public class Level0 {
-    public void level0(WizardModel args) {
+    public static void level0 (WizardModel wizard) {
 
         // create wizard
         WizardModel wizardModel = new WizardModel(null, 500, 1, null, null, 200, 1,null,null,null);
@@ -23,8 +23,6 @@ public class Level0 {
         WizardController wizardController = new WizardController(wizardModel, wizardView, houseModel, petModel, spellController,houseController);
 
         // choose wizard name
-        String wizardName = wizardView.askForName();
-        wizardController.chooseName(wizardName);
 
         // choose wizard house
         WizardModel.House chosenHouse = houseController.chooseHouse();
@@ -35,18 +33,19 @@ public class Level0 {
         WandModel wandModel = new WandModel();
         WandView wandView = new WandView();
         WandController wandController = new WandController(wandModel, wandView);
-        wandController.createWand(wizardName);
+        wandController.createWand(wizard.getName());
         wizardModel.setWand(WandModel.getWood() + " " + WandModel.getLength());
 
         // choose pet
         PetView petView = new PetView();
         PetController petController = new PetController(petModel, petView);
-        petController.choosePet(wizardModel);
+        PetController.choosePet(wizardModel);
 
         // display wizard info
 
         wizardController.updateView();
-        RewardController.giveRewardToWizard(wizardController.getWizardModel());
+
+        RewardController.giveRewardToWizard(wizard);
 
 
     }

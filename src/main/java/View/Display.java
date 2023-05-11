@@ -2,6 +2,7 @@ package View;
 
 import Model.Enemy.TrollModel;
 import Model.EnemyModel;
+import Model.WizardModel;
 
 public class Display {
     public static final String RESET = "\u001B[0m";
@@ -13,8 +14,9 @@ public class Display {
     public static final String CYAN = "\u001B[36m";
 
     public static void displayWizardInfo(String name, int health, int mana, int experience) {
+
         System.out.println(YELLOW + "-----------------------------------------------");
-        System.out.print(PURPLE + "Wizard: " + name + "\t");
+        System.out.print(PURPLE + "Wizard: \t");
         System.out.print(RED + "Health: " + RED + health + "\t");
         System.out.print(BLUE + "Mana: " + BLUE + mana + "\t");
         System.out.println(YELLOW + "Experience: " + YELLOW + experience);

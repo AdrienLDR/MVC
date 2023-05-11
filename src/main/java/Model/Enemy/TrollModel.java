@@ -31,9 +31,4 @@ public class TrollModel extends EnemyModel {
         return health;
     }
 
-    // Setter pour la vie du troll
-    public int setHealth(int health) {
-        TrollModel.health = health;
-        return health;
-    }
 }

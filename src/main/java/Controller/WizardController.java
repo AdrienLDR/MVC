@@ -4,16 +4,23 @@ import Model.*;
 import View.WizardView;
 import lombok.Data;
 import lombok.Getter;
+import java.util.Scanner;
 
+import lombok.Setter;
+
+@Setter
 @Getter
 @Data
 public class WizardController {
-    private final WizardModel wizardModel;
+    private WizardModel wizardModel;
     private final WizardView wizardView;
     private final HouseModel houseModel;
     private final PetModel petModel;
     private final SpellController spellController;
     private final HouseController houseController;
+
+    private static Scanner scanner;
+
     public WizardController(WizardModel wizardModel, WizardView wizardView, HouseModel houseModel, PetModel petModel, SpellController spellController, HouseController houseController) {
         this.wizardModel = wizardModel;
         this.wizardView = wizardView;
@@ -21,14 +28,16 @@ public class WizardController {
         this.petModel = petModel;
         this.spellController = spellController;
         this.houseController = houseController;
+        scanner = new Scanner(System.in); // Initialisation de la variable scanner
+
     }
 
     public void updateView() {
         String name = wizardModel.getName();
         int health = wizardModel.getHealth();
         String houseName = houseModel.getHouseName();
-        String petName = petModel.getName();
-        String petSpecies = petModel.getSpecies();
+        String petName = PetModel.getName();
+        String petSpecies = PetModel.getSpecies();
         String wandWood = wizardModel.getWandWood(); // Utilisation de la méthode getWandWood de WizardModel
         String wandCore = wizardModel.getWandCore(); // Utilisation de la méthode getWandCore de WizardModel
         int wandLength = wizardModel.getWandLength(); // Utilisation de la méthode getWandLength de WizardModel
@@ -45,10 +54,6 @@ public class WizardController {
 
     public void setWizardMana(int mana) {
         wizardModel.setMana(mana);
-    }
-
-    public void chooseName(String name) {
-        wizardModel.setName(name);
     }
 
     public void chooseHouse() {
